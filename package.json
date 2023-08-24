@@ -34,6 +34,7 @@
     "@tweakpane/plugin-essentials": "^0.2.0",
     "@vueuse/components": "^10.3.0",
     "canvas-confetti": "^1.6.0",
+    "esbuild": "^0.19.2",
     "firebase": "^10.1.0",
     "mailersend": "^2.2.0",
     "nitropack-edge": "^2.6.0-28212707.e5f095d",
