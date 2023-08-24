@@ -1,7 +1,7 @@
 <script setup>
-const name = ref('null');
-const email = ref('null');
-const message = ref('null');
+const name = ref(null);
+const email = ref(null);
+const message = ref(null);
 
 const handleSubmit = async () => {
   const result = await useFetch('/api/send-contact-email', {

@@ -1,13 +1,13 @@
 <script setup>
-const childName = ref('null');
-const parentName = ref('null');
-const residence = ref('null');
-const childAge = ref('null');
-const childGender = ref('null');
-const parentEmail = ref('null');
-const parentPhone = ref('null');
-const languageLevel = ref('null');
-const expectations = ref('null');
+const childName = ref(null);
+const parentName = ref(null);
+const residence = ref(null);
+const childAge = ref(null);
+const childGender = ref(null);
+const parentEmail = ref(null);
+const parentPhone = ref(null);
+const languageLevel = ref(null);
+const expectations = ref(null);
 
 const handleSubmit = async () => {
   // const body = JSON.stringify({
