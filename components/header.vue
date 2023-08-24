@@ -1,16 +1,61 @@
+<script setup>
+// import { ref, onMounted, onBeforeUnmount, computed } from 'vue';
+
+const screenWidth = ref(0);
+const isMobile = computed(() => screenWidth.value < 768);
+
+const updateScreenWidth = () => {
+  screenWidth.value = window.innerWidth;
+};
+
+onMounted(() => {
+  screenWidth.value = window.innerWidth;
+  window.addEventListener('resize', updateScreenWidth);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', updateScreenWidth);
+});
+</script>
+
 <template>
-  <div>
-    <header class="text-gray-600 body-font">
-      <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-          <NuxtLink to="/" class="ml-3 text-xl">Калинка</NuxtLink>
+  <header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-4 items-center justify-center">
+      <nav 
+        :class="{
+          'flex-col space-y-4 items-center': isMobile,
+          'flex-row space-x-6 justify-center': !isMobile
+        }"
+        class="flex items-center text-base w-full"
+      >
+
+        <!-- Бесплатное занятие Link -->
+        <NuxtLink 
+          to="/lesson" 
+          class="rounded-lg text-gray-900 bg-blue-200 hover:text-black hover:bg-indigo-400 px-4 py-2"
+          :class="isMobile ? 'w-full text-center' : ''"
+        >
+          Бесплатное занятие
+        </NuxtLink>
+        
+        <!-- Вопросы по Whatsapp Link -->
+        <a 
+          href="https://wa.me/905388895268" 
+          class="rounded-lg text-gray-900 bg-blue-200 hover:text-black hover:bg-green-400 px-4 py-2"
+          :class="isMobile ? 'w-full text-center' : ''"
+        >
+          Вопросы по Whatsapp
         </a>
-        <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center lg:justify-end">
-          <NuxtLink to="/lesson" class="mr-5 hover:text-gray-900">Бесплатное занятие</NuxtLink>
-          <a href="https://wa.me/905388895268" class="mr-5 hover:text-gray-900">Вопросы по Whatsapp</a>
-          <NuxtLink to="/#contact" class="mr-5 hover:text-gray-900">Связаться</NuxtLink>
-        </nav>
-      </div>
-    </header>
-  </div>
+        
+        <!-- Связаться Link -->
+        <NuxtLink 
+          to="/#contact" 
+          class="rounded-lg text-gray-900 bg-blue-200 hover:text-black hover:bg-yellow-400 px-4 py-2"
+          :class="isMobile ? 'w-full text-center' : ''"
+        >
+          Связаться
+        </NuxtLink>
+      </nav>
+    </div>
+  </header>
 </template>

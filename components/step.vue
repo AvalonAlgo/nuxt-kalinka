@@ -3,6 +3,23 @@ const props = defineProps({
   elements: Array,
   lastElement: String
 })
+
+// List of cheerful colors that children might find appealing
+const cheerfulColors = [
+  '#FFC3A0', // peach
+  '#FFD700', // gold
+  '#32CD32', // lime green
+  '#00CED1', // turquoise blue
+  '#FF6B6B', // pink red
+  '#FFD31D', // bright yellow
+  '#A463F2'  // bright purple
+];
+
+// Method to get a random cheerful color
+const randomCheerfulColor = () => {
+  const randomIndex = Math.floor(Math.random() * cheerfulColors.length);
+  return cheerfulColors[randomIndex];
+};
 </script>
 
 <template>
@@ -17,7 +34,7 @@ const props = defineProps({
               <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
                 <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
               </div>
-              <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+              <div :style="{backgroundColor: randomCheerfulColor()}" class="flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
                   <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                   <path d="M22 4L12 14.01l-3-3"></path>

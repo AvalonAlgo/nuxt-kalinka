@@ -2,9 +2,6 @@
   <div>
     <footer class="text-gray-600 body-font">
       <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-        <div class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-          <NuxtLink to="/" class="ml-3 text-xl">Калинка</NuxtLink>
-        </div>
         <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
           <a class="text-gray-500">
             <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">

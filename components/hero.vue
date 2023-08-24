@@ -6,7 +6,7 @@ import { OrbitControls, GLTFModel } from '@tresjs/cientos';
 
 <template>
   <div>
-    <section class="text-gray-600 body-font">
+    <section class="body-font">
       <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
 
         <img class=" mb-10 object-cover object-center rounded" alt="hero" src="/kalinka-logo.jpg">
@@ -14,7 +14,7 @@ import { OrbitControls, GLTFModel } from '@tresjs/cientos';
         <div class="text-center lg:w-2/3 w-full -mb-10">
           <!-- <h1 class="title-font sm:text-4xl text-3xl font-medium text-gray-900">Калинка</h1>
           <h2 class="title-font sm:text-3xl text-2xl mb-4 font-medium text-gray-900">Детская игровая группа в Стамбуле</h2> -->
-          <h1 class="title-font leading-relaxed text-3xl">Обучаем детей русскому языку, истории и культуре и помогаем разговорить детей на русском языке</h1>
+          <h1 class="bg-gradient-to-r from-indigo-500 to-red-500 bg-clip-text text-transparent title-font font-semibold leading-relaxed text-3xl italic">Обучаем детей русскому языку, истории и культуре и помогаем разговорить детей на русском языке</h1>
         </div>
       </div>
     </section>
