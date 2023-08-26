@@ -10,14 +10,15 @@ const cheerfulColors = [
   '#32CD32', // lime green
   '#00CED1', // turquoise blue
   '#FF6B6B', // pink red
-  '#FFD31D', // bright yellow
   '#A463F2'  // bright purple
 ];
 
 // Method to get a random cheerful color
 const randomCheerfulColor = () => {
   const randomIndex = Math.floor(Math.random() * cheerfulColors.length);
-  return cheerfulColors[randomIndex];
+  const chosenColor = cheerfulColors[randomIndex];
+  cheerfulColors.splice(randomIndex, 1);  // remove the color from the array
+  return chosenColor;
 };
 </script>
 

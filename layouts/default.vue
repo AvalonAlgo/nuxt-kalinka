@@ -8,6 +8,6 @@
   <div class="bg_image">
     <Header />
     <slot />
-    <Footer />
+    <!-- <Footer /> -->
   </div>
 </template>

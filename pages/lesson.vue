@@ -204,7 +204,7 @@ const handleSubmit = async () => {
             </div>
           
             <div class="p-2 w-full flex justify-center">
-              <NuxtLink to="/" class="text-center w-1/2 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Назад</NuxtLink>
+              <NuxtLink to="/" class="text-center w-1/2 text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">Вернуться на главную страницу</NuxtLink>
             </div>
           
           </div>

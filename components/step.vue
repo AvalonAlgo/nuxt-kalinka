@@ -11,14 +11,15 @@ const cheerfulColors = [
   '#32CD32', // lime green
   '#00CED1', // turquoise blue
   '#FF6B6B', // pink red
-  '#FFD31D', // bright yellow
   '#A463F2'  // bright purple
 ];
 
 // Method to get a random cheerful color
 const randomCheerfulColor = () => {
   const randomIndex = Math.floor(Math.random() * cheerfulColors.length);
-  return cheerfulColors[randomIndex];
+  const chosenColor = cheerfulColors[randomIndex];
+  cheerfulColors.splice(randomIndex, 1);  // remove the color from the array
+  return chosenColor;
 };
 </script>
 
@@ -42,7 +43,7 @@ const randomCheerfulColor = () => {
               </div>
               <div class="flex-grow pl-4">
                 <!-- <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">{{ e }}</h2> -->
-                <p class="leading-relaxed">{{ e }}</p>
+                <p class="leading-relaxed text-lg">{{ e }}</p>
               </div>
             </div>
 
@@ -56,7 +57,7 @@ const randomCheerfulColor = () => {
               </div>
               <div class="flex-grow pl-4">
                 <!-- <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">FINISH</h2> -->
-                <p class="leading-relaxed">{{ props.lastElement }}</p>
+                <p class="leading-relaxed text-lg">{{ props.lastElement }}</p>
               </div>
             </div>
 

@@ -17,7 +17,7 @@ const props = defineProps({
           <div v-for="e in props.elements" :key="e" class="xl:w-1/3 md:w-1/2 sm:w-full p-4">
             <div class="border border-gray-200 p-6 rounded-lg h-full">
               <!-- <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Shooting Stars</h2> -->
-              <p class="leading-relaxed text-base">{{ e }}</p>
+              <p class="leading-relaxed text-lg">{{ e }}</p>
             </div>
           </div>
 
