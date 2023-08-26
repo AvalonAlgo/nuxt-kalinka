@@ -24,7 +24,7 @@ onBeforeUnmount(() => {
       <nav 
         :class="{
           'flex-col space-y-4 items-center': isMobile,
-          'flex-row space-x-6 justify-center': !isMobile
+          'flex-row justify-evenly': !isMobile
         }"
         class="flex items-center text-base w-full"
       >
