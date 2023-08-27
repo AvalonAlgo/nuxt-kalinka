@@ -15,7 +15,7 @@ function setActive(e) {
     <section class="text-gray-600 body-font lg:mb-20">
       <div class="container px-5 py-12 mx-auto flex flex-wrap flex-col">
         <div class="flex flex-wrap w-full mb-10 flex-col items-center text-center">
-          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900 italic">Наши группы...</h1>
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-blue-500 italic">Наши группы...</h1>
         </div>
 
         <div class="flex flex-wrap mx-auto mb-16 justify-center sm:justify-start">

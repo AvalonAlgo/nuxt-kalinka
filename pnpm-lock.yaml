@@ -23,9 +23,6 @@ dependencies:
   '@tweakpane/plugin-essentials':
     specifier: ^0.2.0
     version: 0.2.0(tweakpane@4.0.0)
-  '@vueuse/components':
-    specifier: ^10.3.0
-    version: 10.3.0(vue@3.3.4)
   canvas-confetti:
     specifier: ^1.6.0
     version: 1.6.0
@@ -61,9 +58,6 @@ devDependencies:
   '@types/node':
     specifier: ^18.17.3
     version: 18.17.3
-  '@vueuse/core':
-    specifier: ^10.3.0
-    version: 10.3.0(vue@3.3.4)
   '@vueuse/nuxt':
     specifier: ^10.3.0
     version: 10.3.0(nuxt@3.6.5)(vue@3.3.4)
@@ -3702,6 +3696,7 @@ packages:
     dependencies:
       is-glob: 4.0.3
       micromatch: 4.0.5
+      napi-wasm: 1.1.0
     bundledDependencies:
       - napi-wasm
 
@@ -4953,17 +4948,6 @@ packages:
 
   /@vue/shared@3.3.4:
     resolution: {integrity: sha512-7OjdcV8vQ74eiz1TZLzZP4JwqM5fA94K6yntPS5Z25r9HDuGNzaGdgvwKYq6S+MxwF0TFRwe50fIR/MYnakdkQ==}
-
-  /@vueuse/components@10.3.0(vue@3.3.4):
-    resolution: {integrity: sha512-EeZz3kjmJI7bH7JSxxMlLyk21LGl6GQjXfpl2n/GiI9QSJi+BVzIra5kEty5eM8McwAanx3e/HnK4drYTgFOWw==}
-    dependencies:
-      '@vueuse/core': 10.3.0(vue@3.3.4)
-      '@vueuse/shared': 10.3.0(vue@3.3.4)
-      vue-demi: 0.14.5(vue@3.3.4)
-    transitivePeerDependencies:
-      - '@vue/composition-api'
-      - vue
-    dev: false
 
   /@vueuse/core@10.3.0(vue@3.3.4):
     resolution: {integrity: sha512-BEM5yxcFKb5btFjTSAFjTu5jmwoW66fyV9uJIP4wUXXU8aR5Hl44gndaaXp7dC5HSObmgbnR2RN+Un1p68Mf5Q==}
@@ -10846,6 +10830,9 @@ packages:
     resolution: {integrity: sha512-ONmRUqK7zj7DWX0D9ADe03wbwOBZxNAfF20PlGfCWQcD3+/MakShIHrMqx9YwPTfxDdF1zLeL+RGZiR9kGMLdg==}
     dev: true
     optional: true
+
+  /napi-wasm@1.1.0:
+    resolution: {integrity: sha512-lHwIAJbmLSjF9VDRm9GoVOy9AGp3aIvkjv+Kvz9h16QR3uSVYH78PNQUnT2U4X53mhlnV2M7wrhibQ3GHicDmg==}
 
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
