@@ -47,10 +47,8 @@ function setActive(e) {
           <div class="flex flex-col text-center w-full">
             <h1 class="text-2xl font-medium title-font mb-2 bg-gradient-to-r from-cyan-500 to-violet-600 bg-clip-text text-transparent">{{ props.elements[0][0] }}</h1>
             <h2 class="text-l font-medium title-font mb-4 text-gray-900 italic">{{ props.elements[0][1] }}</h2>
-            <!-- <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p> -->
-            <ul class="text-left">
-              <li class="border m-2 rounded p-2 text-lg" v-for="i in props.elements[0][2]" :key="i">+ {{ i }}</li>
-            </ul>
+
+            <StepGroups :elements="props.elements[0][2]" />
           </div>
         </div>
 
@@ -65,10 +63,8 @@ function setActive(e) {
           <div class="flex flex-col text-center w-full">
             <h1 class="text-2xl font-medium title-font mb-2 bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent">{{ props.elements[1][0] }}</h1>
             <h2 class="text-l font-medium title-font mb-4 text-gray-900 italic">{{ props.elements[1][1] }}</h2>
-            <!-- <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p> -->
-            <ul class="text-left">
-              <li class="border m-2 rounded p-2 text-lg" v-for="i in props.elements[1][2]" :key="i">+ {{ i }}</li>
-            </ul>
+
+            <StepGroups :elements="props.elements[1][2]" />
           </div>
         </div>
 
@@ -83,10 +79,8 @@ function setActive(e) {
           <div class="flex flex-col text-center w-full">
             <h1 class="text-2xl font-medium title-font mb-2 bg-gradient-to-r from-red-500 to-violet-500 bg-clip-text text-transparent">{{ props.elements[2][0] }}</h1>
             <h2 class="text-l font-medium title-font mb-4 text-gray-900 italic">{{ props.elements[2][1] }}</h2>
-            <!-- <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p> -->
-            <ul class="text-left">
-              <li class="border m-2 rounded p-2 text-lg" v-for="i in props.elements[2][2]" :key="i">+ {{ i }}</li>
-            </ul>
+
+            <StepGroups :elements="props.elements[2][2]" />
           </div>
         </div>
 

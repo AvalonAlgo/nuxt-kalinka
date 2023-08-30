@@ -20,7 +20,22 @@ const randomCheerfulColor = () => {
   cheerfulColors.splice(randomIndex, 1);  // remove the color from the array
   return chosenColor;
 };
+
+const colorsForElements = computed(() => props.elements.map(() => randomCheerfulColor()));
+
+const el = ref(null)
+const isVisible = useElementVisibility(el)
 </script>
+
+<style scoped>
+@keyframes flashWhite {
+  50% { background-color: white; }
+}
+
+.flash-bg-white {
+  animation: flashWhite 1s;
+}
+</style>
 
 <template>
   <div>
@@ -30,15 +45,17 @@ const randomCheerfulColor = () => {
           <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-blue-500 italic">Мы с радостью Вам поможем, если...</h1>
           <!-- <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table.</p> -->
         </div>
-        <div class="flex flex-wrap -m-4">
 
-          <div v-for="e in props.elements" :key="e" class="p-4 lg:w-1/3 sm:w-full">
-            <div :style="{backgroundColor: randomCheerfulColor()}" class="h-full bg-opacity-75 px-8 pt-16 pb-16 rounded-lg overflow-hidden flex flex-col justify-center items-center text-center relative">
+        <div class="flex flex-wrap -m-4">
+          <div ref="el" v-for="(e, index) in props.elements" :key="e" class="p-4 lg:w-1/3 sm:w-full">
+            <div :class="{'flash-bg-white': isVisible}" 
+                :style="{backgroundColor: colorsForElements[index]}" 
+                class="h-full bg-opacity-75 px-8 pt-16 pb-16 rounded-lg overflow-hidden flex flex-col justify-center items-center text-center relative">
               <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">{{ e }}</h1>
             </div>
           </div>
-
         </div>
+
       </div>
     </section>
   </div>

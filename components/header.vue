@@ -1,62 +1,57 @@
 <script setup>
-// import { ref, onMounted, onBeforeUnmount, computed } from 'vue';
-
-const screenWidth = ref(0);
-const isMobile = computed(() => screenWidth.value < 768);
-
-const updateScreenWidth = () => {
-  screenWidth.value = window.innerWidth;
-};
-
-onMounted(() => {
-  screenWidth.value = window.innerWidth;
-  window.addEventListener('resize', updateScreenWidth);
-});
-
-onBeforeUnmount(() => {
-  window.removeEventListener('resize', updateScreenWidth);
-});
+const isOpen = ref(false)
 </script>
 
 <template>
   <header class="text-gray-600 body-font">
-    <div class="container mx-auto flex flex-wrap p-4 items-center justify-center">
-      <nav 
-        :class="{
-          'flex-col space-y-4 items-center': isMobile,
-          'flex-row justify-evenly': !isMobile
-        }"
-        class="flex items-center text-base w-full"
-      >
+    <div class="container mx-auto flex p-5 items-center justify-between">
+      <a class="flex title-font font-medium items-center text-gray-900">
+        <span class="ml-3 text-xl">Калинка</span>
+      </a>
 
-        <!-- Бесплатное занятие Link -->
-        <NuxtLink 
-          to="/lesson" 
-          class="rounded-lg text-gray-900 bg-blue-200 hover:text-black hover:bg-indigo-400 px-4 py-2"
-          :class="isMobile ? 'w-full text-center' : ''"
-        >
-          Бесплатное занятие
-        </NuxtLink>
-        
-        <!-- Вопросы по Whatsapp Link -->
-        <a 
-          href="https://wa.me/905388895268" 
-          class="rounded-lg text-gray-900 bg-blue-200 hover:text-black hover:bg-green-400 px-4 py-2"
-          :class="isMobile ? 'w-full text-center' : ''"
-        >
-          Вопросы по Whatsapp
-        </a>
-        
-        <!-- Связаться Link -->
-        <NuxtLink 
-          to="/#contact" 
-          class="rounded-lg text-gray-900 bg-blue-200 hover:text-black hover:bg-yellow-400 px-4 py-2"
-          :class="isMobile ? 'w-full text-center' : ''"
-        >
-          Связаться
-        </NuxtLink>
-        
-      </nav>
+      <UButton label="Open" @click="isOpen = true" color="blue" class="inline-flex items-center border-0 py-1 px-3 focus:outline-none rounded text-base">
+        Навигация
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </UButton>
+
+      <USlideover v-model="isOpen" prevent-close class="opacity-95">
+        <UCard class="flex flex-col flex-1" :ui="{ body: { base: 'flex-1' }, ring: '', divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
+          <template #header>
+            <div class="flex items-center justify-between">
+              <h3 class="text-base font-semibold leading-6 text-gray-900 dark:text-white">
+                Калинка
+              </h3>
+              <UButton color="gray" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1" @click="isOpen = false" />
+            </div>
+          </template>
+
+          <div class="flex flex-col text-xl space-y-2 bg-gradient-to-br from-violet-500 to-red-500 bg-clip-text text-transparent">
+            <NuxtLink to="/lesson" @click="isOpen = false" class="flex flex-row">
+              Бесплатное занятие
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1 mt-2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </NuxtLink>
+            <a href="https://wa.me/905388895268" @click="isOpen = false" class="flex flex-row">
+              Вопросы по Whatsapp
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1 mt-2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+            <NuxtLink to="/#contact" @click="isOpen = false" class="flex flex-row">
+              Связаться
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1 mt-2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </NuxtLink>
+          </div>
+
+          <!-- <Placeholder class="h-full" /> -->
+        </UCard>
+      </USlideover>
+
     </div>
   </header>
 </template>
