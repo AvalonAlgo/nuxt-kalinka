@@ -1,4 +1,6 @@
 <script setup>
+import VueTypewriterEffect from "vue-typewriter-effect";
+
 const props = defineProps({
   elements: Array
 })
@@ -23,17 +25,44 @@ const randomCheerfulColor = () => {
 
 const colorsForElements = computed(() => props.elements.map(() => randomCheerfulColor()));
 
-const el = ref(null)
-const isVisible = useElementVisibility(el)
+const eltitle = ref(null)
+const isVisibletitle = useElementVisibility(eltitle)
+
+const text = 'Мы с радостью Вам поможем, если...';
+const animatedText = ref('');
+let index = 0;
+
+const typeWriter = () => {
+  if (index < text.length) {
+    animatedText.value += text.charAt(index);
+    index++;
+    setTimeout(typeWriter, 100); // Adjust the typing speed by changing the timeout duration
+  }
+};
+
+watchEffect(() => {
+  typeWriter();
+});
 </script>
 
 <style scoped>
-@keyframes flashWhite {
-  50% { background-color: white; }
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: .15em solid black;  /* Add a typewriter blinking cursor */
+  white-space: nowrap;               /* Keep everything on the same line */
+  animation: typing 3.5s steps(40, end), blink 1.5s step-end infinite; /* Adjusted blink duration to 1.5s */
 }
 
-.flash-bg-white {
-  animation: flashWhite 1s;
+/* Animation for the typewriter effect and blinking cursor */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: black }
 }
 </style>
 
@@ -42,14 +71,13 @@ const isVisible = useElementVisibility(el)
     <section class="text-gray-600 body-font">
       <div class="container px-5 py-12 mx-auto">
         <div class="flex flex-wrap w-full mb-10 flex-col items-center text-center">
-          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-blue-500 italic">Мы с радостью Вам поможем, если...</h1>
-          <!-- <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table.</p> -->
+          <!-- <VueTypewriterEffect class="typing sm:text-3xl text-2xl font-medium title-font mb-2 text-blue-500 italic" :strings="['Мы с радостью Вам поможем, если...']" /> -->
+          <h1 ref="eltitle" :class="{'typewriter': isVisibletitle}" class="sm:text-3xl text-2xl font-medium title-font mb-2 text-blue-500 italic">{{ animatedText }}</h1>
         </div>
 
         <div class="flex flex-wrap -m-4">
-          <div ref="el" v-for="(e, index) in props.elements" :key="e" class="p-4 lg:w-1/3 sm:w-full">
-            <div :class="{'flash-bg-white': isVisible}" 
-                :style="{backgroundColor: colorsForElements[index]}" 
+          <div v-for="(e, index) in props.elements" :key="e" class="p-4 lg:w-1/3 sm:w-full">
+            <div :style="{backgroundColor: colorsForElements[index]}" 
                 class="h-full bg-opacity-75 px-8 pt-16 pb-16 rounded-lg overflow-hidden flex flex-col justify-center items-center text-center relative">
               <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">{{ e }}</h1>
             </div>
