@@ -10,6 +10,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     'vue-email/nuxt',
     'nuxt-icon',
+    'vue3-carousel-nuxt',
+    '@element-plus/nuxt'
   ],
   supabase: {
     redirect: false

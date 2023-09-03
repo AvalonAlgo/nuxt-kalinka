@@ -21,13 +21,57 @@ const randomCheerfulColor = () => {
   cheerfulColors.splice(randomIndex, 1);  // remove the color from the array
   return chosenColor;
 };
+
+const images = ref([
+  '/1.jpg',
+  '/2.jpg',
+  '/4.jpg',
+  '/6.jpg',
+  '/7.jpg',
+  '/8.jpg'
+]);
+
+const screenSize = ref('')
+
+onMounted(() => {
+  const updateScreenSize = () => {
+    if (window.innerWidth < 640) {
+      screenSize.value = 'xs' // Smaller than TailwindCSS's sm breakpoint
+    } else if (window.innerWidth < 768) {
+      screenSize.value = 'sm'
+    } else if (window.innerWidth < 1024) {
+      screenSize.value = 'md'
+    } else if (window.innerWidth < 1280) {
+      screenSize.value = 'lg'
+    } else {
+      screenSize.value = 'xl'
+    }
+  }
+
+  window.addEventListener('resize', updateScreenSize)
+  updateScreenSize()
+
+  onUnmounted(() => {
+    window.removeEventListener('resize', updateScreenSize)
+  })
+})
+
+const shouldShowSmallCarousel = computed(() => {
+  return screenSize.value === 'xs' || screenSize.value === 'sm';
+})
+
+const shouldShowLargeCarousel = computed(() => {
+  return screenSize.value === 'md' || screenSize.value === 'lg' || screenSize.value === 'xl';
+})
 </script>
 
 <template>
+  
   <div>
     <section class="text-gray-600 body-font">
       <div class="container px-5 py-12 mx-auto flex flex-wrap">
         <div class="flex flex-wrap w-full">
+
           <div class="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
 
             <!-- One body element -->
@@ -42,7 +86,6 @@ const randomCheerfulColor = () => {
                 </svg>
               </div>
               <div class="flex-grow pl-4">
-                <!-- <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">{{ e }}</h2> -->
                 <p class="leading-relaxed text-lg">{{ e }}</p>
               </div>
             </div>
@@ -56,14 +99,28 @@ const randomCheerfulColor = () => {
                 </svg>
               </div>
               <div class="flex-grow pl-4">
-                <!-- <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">FINISH</h2> -->
                 <p class="leading-relaxed text-lg">{{ props.lastElement }}</p>
               </div>
             </div>
 
           </div>
-          <img class="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12" src="https://dummyimage.com/1200x500" alt="step">
+          
+          <NuxtImg src="/andrey.jpg" class="lg:w-1/2 mx-auto md:w-1/3 object-cover object-center rounded-lg md:mt-0 mt-12" />
+          
         </div>
+
+        <el-carousel v-if="shouldShowSmallCarousel" :interval="4000" type="card" height="250px" class="w-full h-full mt-20">
+          <el-carousel-item v-for="item in images" :key="item" class="w-full h-full">
+            <NuxtImg :src="item" class="h-full w-full" alt="" />
+          </el-carousel-item>
+        </el-carousel>
+
+        <el-carousel v-if="shouldShowLargeCarousel" :interval="4000" type="card" height="500px" class="w-full h-full mt-20">
+          <el-carousel-item v-for="item in images" :key="item" class="w-full h-full">
+            <NuxtImg :src="item" class="h-full w-full" alt="" />
+          </el-carousel-item>
+        </el-carousel>
+
       </div>
     </section>    
   </div>
