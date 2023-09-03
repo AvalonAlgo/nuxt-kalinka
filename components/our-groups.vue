@@ -72,11 +72,26 @@ watchEffect(() => {
             <UCard :ui="{ divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
               
               <template #header>
-                Малыши
+                <div class="flex items-center justify-between">
+                  <h1 class="text-xl font-bold">Малыши (2-3 года)</h1>
+                  <UButton color="gray" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1" @click="isOpen = false" />  
+                </div>
               </template>
 
-              Ваш малыш еще не ходит в садик, но Вы хотите, чтобы он развивался и узнавал новое в коллективе, учился взаимодействовать со сверстниками
-              <NuxtImg src="/malishi.jpg" class="rounded-lg mx-auto mt-4" />
+              <h2 class="text-lg text-center">
+                Вторник, пятница
+                <br /> 9.00-10.00
+              </h2>
+
+              <NuxtImg src="/malishi.jpg" class="rounded-lg mx-auto m-4" />
+
+              <ul class="space-y-2">
+                <li class="border rounded-lg p-2">+ Ваш малыш еще не ходит в садик, но Вы хотите, чтобы он развивался и узнавал новое в коллективе, учился взаимодействовать со сверстниками</li>
+                <li class="border rounded-lg p-2">+ Вам сложно  организовать игровые занятия дома, не хватает времени</li>
+                <li class="border rounded-lg p-2">+ Вы хотите найти друзей Вашему малышу, с которыми бы он общался на русском языке</li>
+                <li class="border rounded-lg p-2">+ Вы хотите разговорить ребенка, но самостоятельно не получается</li>
+                <li class="border rounded-lg p-2">+ Вы хотите , чтобы ребенок участвовал в утренниках как в Вашем детстве</li>
+              </ul>
 
             </UCard>
           </UModal>
@@ -85,11 +100,26 @@ watchEffect(() => {
             <UCard :ui="{ divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
               
               <template #header>
-                Солнышко
+                <div class="flex items-center justify-between">
+                  <h1 class="text-xl font-bold">Солнышко (3-4 года)</h1>
+                  <UButton color="gray" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1" @click="isOpen = false" />  
+                </div>
               </template>
 
-              Ваш малыш еще не ходит в садик, но Вы хотите, чтобы он развивался и узнавал новое в коллективе, учился взаимодействовать со сверстниками
-              <NuxtImg src="/solnishko.png" class="rounded-lg mx-auto mt-4" />
+              <h2 class="text-lg text-center">
+                Вторник, пятница
+                <br /> 10.30-12.00
+              </h2>
+              
+              <NuxtImg src="/solnishko.png" class="rounded-lg mx-auto m-4" />
+
+              <ul class="space-y-2">
+                <li class="border rounded-lg p-2">+ Ваш малыш еще не ходит в садик, но Вы хотите, чтобы он развивался и узнавал новое в коллективе, учился взаимодействовать со сверстниками</li>
+                <li class="border rounded-lg p-2">+ Вам сложно  организовать игровые занятия дома, не хватает времени</li>
+                <li class="border rounded-lg p-2">+ Вы хотите найти друзей Вашему малышу, с которыми бы он общался на русском языке</li>
+                <li class="border rounded-lg p-2">+ Вы хотите разговорить ребенка, но самостоятельно не получается</li>
+                <li class="border rounded-lg p-2">+ Вы хотите , чтобы ребенок участвовал в утренниках как в Вашем детстве</li>
+              </ul>
 
             </UCard>
           </UModal>
@@ -98,11 +128,28 @@ watchEffect(() => {
             <UCard :ui="{ divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
               
               <template #header>
-                Букварята
+                <div class="flex items-center justify-between">
+                  <h1 class="text-xl font-bold">Букварята (5-6 лет)</h1>
+                  <UButton color="gray" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1" @click="isOpen = false" />  
+                </div>
               </template>
 
-              Ваш малыш еще не ходит в садик, но Вы хотите, чтобы он развивался и узнавал новое в коллективе, учился взаимодействовать со сверстниками
-              <NuxtImg src="/bukvaryata.jpg" class="rounded-lg mx-auto mt-4" />
+              <h2 class="text-lg text-center">
+                Суббота
+                <br /> 9.00-11.00
+              </h2>
+
+              <NuxtImg src="/bukvaryata.jpg" class="rounded-lg mx-auto m-4" />
+
+              <ul class="space-y-2">
+                <li class="border rounded-lg p-2">+ У Вас не хватает сил и времени на организацию домашнего образовательного процесса</li>
+                <li class="border rounded-lg p-2">+ Вы хотите укрепить мотивацию ребенка изучать русский язык</li>
+                <li class="border rounded-lg p-2">+ Вам важно, чтобы занятия были интересны самому ребенку и чтобы Вы  видели результаты</li>
+                <li class="border rounded-lg p-2">+ Вы не можете найти курсы русского языка, чтобы Ваш ребенок учился с ровесниками</li>
+                <li class="border rounded-lg p-2">+ Вы хотите, чтобы Ваш ребенок не сильно отставал от своих ровесников в странах СНГ и в случае переезда смог быстро наверстать программу русского языка общеобразовательной школы</li>
+                <li class="border rounded-lg p-2">+ Вам важно, чтобы помимо русского языка ребенок изучал Литературу, Окружающий Мир, Историю и обогатил родную речь</li>
+                <li class="border rounded-lg p-2">+ Вы хотите найти русскоязычную среду для Вашего ребенка и себя, т.к. вам сложно адаптироваться после недавнего переезда в Турцию</li>
+              </ul>
 
             </UCard>
           </UModal>
@@ -111,11 +158,28 @@ watchEffect(() => {
             <UCard :ui="{ divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
               
               <template #header>
-                Знайки
+                <div class="flex items-center justify-between">
+                  <h1 class="text-xl font-bold">Знайки (6-7 лет)</h1>
+                  <UButton color="gray" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1" @click="isOpen = false" />  
+                </div>
               </template>
 
-              Ваш малыш еще не ходит в садик, но Вы хотите, чтобы он развивался и узнавал новое в коллективе, учился взаимодействовать со сверстниками
-              <NuxtImg src="/znayki.jpg" class="rounded-lg mx-auto mt-4" />
+              <h2 class="text-lg text-center">
+                Суббота
+                <br /> 14.00-16.00
+              </h2>
+
+              <NuxtImg src="/znayki.jpg" class="rounded-lg mx-auto m-4" />
+
+              <ul class="space-y-2">
+                <li class="border rounded-lg p-2">+ У Вас не хватает сил и времени на организацию домашнего образовательного процесса</li>
+                <li class="border rounded-lg p-2">+ Вы хотите укрепить мотивацию ребенка изучать русский язык</li>
+                <li class="border rounded-lg p-2">+ Вам важно, чтобы занятия были интересны самому ребенку и чтобы Вы  видели результаты</li>
+                <li class="border rounded-lg p-2">+ Вы не можете найти курсы русского языка, чтобы Ваш ребенок учился с ровесниками</li>
+                <li class="border rounded-lg p-2">+ Вы хотите, чтобы Ваш ребенок не сильно отставал от своих ровесников в странах СНГ и в случае переезда смог быстро наверстать программу русского языка общеобразовательной школы</li>
+                <li class="border rounded-lg p-2">+ Вам важно, чтобы помимо русского языка ребенок изучал Литературу, Окружающий Мир, Историю и обогатил родную речь</li>
+                <li class="border rounded-lg p-2">+ Вы хотите найти русскоязычную среду для Вашего ребенка и себя, т.к. вам сложно адаптироваться после недавнего переезда в Турцию</li>
+              </ul>
 
             </UCard>
           </UModal>
@@ -124,11 +188,28 @@ watchEffect(() => {
             <UCard :ui="{ divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
               
               <template #header>
-                Читайки
+                <div class="flex items-center justify-between">
+                  <h1 class="text-xl font-bold">Читайки (7-8 лет)</h1>
+                  <UButton color="gray" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1" @click="isOpen = false" />  
+                </div>
               </template>
 
-              Ваш малыш еще не ходит в садик, но Вы хотите, чтобы он развивался и узнавал новое в коллективе, учился взаимодействовать со сверстниками
-              <NuxtImg src="/chitayki.png" class="rounded-lg mx-auto mt-4" />
+              <h2 class="text-lg text-center">
+                Суббота
+                <br /> 11.30-13.30
+              </h2>
+
+              <NuxtImg src="/chitayki.png" class="rounded-lg mx-auto m-4" />
+
+              <ul class="space-y-2">
+                <li class="border rounded-lg p-2">+ У Вас не хватает сил и времени на организацию домашнего образовательного процесса</li>
+                <li class="border rounded-lg p-2">+ Вы хотите укрепить мотивацию ребенка изучать русский язык</li>
+                <li class="border rounded-lg p-2">+ Вам важно, чтобы занятия были интересны самому ребенку и чтобы Вы  видели результаты</li>
+                <li class="border rounded-lg p-2">+ Вы не можете найти курсы русского языка, чтобы Ваш ребенок учился с ровесниками</li>
+                <li class="border rounded-lg p-2">+ Вы хотите, чтобы Ваш ребенок не сильно отставал от своих ровесников в странах СНГ и в случае переезда смог быстро наверстать программу русского языка общеобразовательной школы</li>
+                <li class="border rounded-lg p-2">+ Вам важно, чтобы помимо русского языка ребенок изучал Литературу, Окружающий Мир, Историю и обогатил родную речь</li>
+                <li class="border rounded-lg p-2">+ Вы хотите найти русскоязычную среду для Вашего ребенка и себя, т.к. вам сложно адаптироваться после недавнего переезда в Турцию</li>
+              </ul>
 
             </UCard>
           </UModal>
@@ -137,11 +218,28 @@ watchEffect(() => {
             <UCard :ui="{ divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
               
               <template #header>
-                Фантазёры
+                <div class="flex items-center justify-between">
+                  <h1 class="text-xl font-bold">Фантазёры (8-9 лет)</h1>
+                  <UButton color="gray" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1" @click="isOpen = false" />  
+                </div>
               </template>
 
-              Ваш малыш еще не ходит в садик, но Вы хотите, чтобы он развивался и узнавал новое в коллективе, учился взаимодействовать со сверстниками
-              <NuxtImg src="/fantazyeri.jpg" class="rounded-lg mx-auto mt-4" />
+              <h2 class="text-lg text-center">
+                Суббота
+                <br /> 16.30-18.30
+              </h2>
+
+              <NuxtImg src="/fantazyeri.jpg" class="rounded-lg mx-auto m-4" />
+
+              <ul class="space-y-2">
+                <li class="border rounded-lg p-2">+ У Вас не хватает сил и времени на организацию домашнего образовательного процесса</li>
+                <li class="border rounded-lg p-2">+ Вы хотите укрепить мотивацию ребенка изучать русский язык</li>
+                <li class="border rounded-lg p-2">+ Вам важно, чтобы занятия были интересны самому ребенку и чтобы Вы  видели результаты</li>
+                <li class="border rounded-lg p-2">+ Вы не можете найти курсы русского языка, чтобы Ваш ребенок учился с ровесниками</li>
+                <li class="border rounded-lg p-2">+ Вы хотите, чтобы Ваш ребенок не сильно отставал от своих ровесников в странах СНГ и в случае переезда смог быстро наверстать программу русского языка общеобразовательной школы</li>
+                <li class="border rounded-lg p-2">+ Вам важно, чтобы помимо русского языка ребенок изучал Литературу, Окружающий Мир, Историю и обогатил родную речь</li>
+                <li class="border rounded-lg p-2">+ Вы хотите найти русскоязычную среду для Вашего ребенка и себя, т.к. вам сложно адаптироваться после недавнего переезда в Турцию</li>
+              </ul>
 
             </UCard>
           </UModal>
@@ -150,11 +248,28 @@ watchEffect(() => {
             <UCard :ui="{ divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
               
               <template #header>
-                Волшебники
+                <div class="flex items-center justify-between">
+                  <h1 class="text-xl font-bold">Волшебники (9-11)</h1>
+                  <UButton color="gray" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1" @click="isOpen = false" />  
+                </div>
               </template>
 
-              Ваш малыш еще не ходит в садик, но Вы хотите, чтобы он развивался и узнавал новое в коллективе, учился взаимодействовать со сверстниками
-              <NuxtImg src="/volshebniki.jpg" class="rounded-lg mx-auto mt-4" />
+              <h2 class="text-lg text-center">
+                Пятница
+                <br /> 17.00-19.00
+              </h2>
+
+              <NuxtImg src="/volshebniki.jpg" class="rounded-lg mx-auto m-4" />
+
+              <ul class="space-y-2">
+                <li class="border rounded-lg p-2">+ У Вас не хватает сил и времени на организацию домашнего образовательного процесса</li>
+                <li class="border rounded-lg p-2">+ Вы хотите укрепить мотивацию ребенка изучать русский язык</li>
+                <li class="border rounded-lg p-2">+ Вам важно, чтобы занятия были интересны самому ребенку и чтобы Вы  видели результаты</li>
+                <li class="border rounded-lg p-2">+ Вы не можете найти курсы русского языка, чтобы Ваш ребенок учился с ровесниками</li>
+                <li class="border rounded-lg p-2">+ Вы хотите, чтобы Ваш ребенок не сильно отставал от своих ровесников в странах СНГ и в случае переезда смог быстро наверстать программу русского языка общеобразовательной школы</li>
+                <li class="border rounded-lg p-2">+ Вам важно, чтобы помимо русского языка ребенок изучал Литературу, Окружающий Мир, Историю и обогатил родную речь</li>
+                <li class="border rounded-lg p-2">+ Вы хотите найти русскоязычную среду для Вашего ребенка и себя, т.к. вам сложно адаптироваться после недавнего переезда в Турцию</li>
+              </ul>
 
             </UCard>
           </UModal>
@@ -163,11 +278,28 @@ watchEffect(() => {
             <UCard :ui="{ divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
               
               <template #header>
-                Книгоманы
+                <div class="flex items-center justify-between">
+                  <h1 class="text-xl font-bold">Книгоманы (11+)</h1>
+                  <UButton color="gray" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1" @click="isOpen = false" />  
+                </div>
               </template>
 
-              Ваш малыш еще не ходит в садик, но Вы хотите, чтобы он развивался и узнавал новое в коллективе, учился взаимодействовать со сверстниками
-              <NuxtImg src="/knigomani.jpg" class="rounded-lg mx-auto mt-4" />
+              <h2 class="text-lg text-center">
+                Среда
+                <br /> 17.30-19.30
+              </h2>
+
+              <NuxtImg src="/knigomani.jpg" class="rounded-lg mx-auto m-4" />
+
+              <ul class="space-y-2">
+                <li class="border rounded-lg p-2">+ У Вас не хватает сил и времени на организацию домашнего образовательного процесса</li>
+                <li class="border rounded-lg p-2">+ Вы хотите укрепить мотивацию ребенка изучать русский язык</li>
+                <li class="border rounded-lg p-2">+ Вам важно, чтобы занятия были интересны самому ребенку и чтобы Вы  видели результаты</li>
+                <li class="border rounded-lg p-2">+ Вы не можете найти курсы русского языка, чтобы Ваш ребенок учился с ровесниками</li>
+                <li class="border rounded-lg p-2">+ Вы хотите, чтобы Ваш ребенок не сильно отставал от своих ровесников в странах СНГ и в случае переезда смог быстро наверстать программу русского языка общеобразовательной школы</li>
+                <li class="border rounded-lg p-2">+ Вам важно, чтобы помимо русского языка ребенок изучал Литературу, Окружающий Мир, Историю и обогатил родную речь</li>
+                <li class="border rounded-lg p-2">+ Вы хотите найти русскоязычную среду для Вашего ребенка и себя, т.к. вам сложно адаптироваться после недавнего переезда в Турцию</li>
+              </ul>
 
             </UCard>
           </UModal>

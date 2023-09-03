@@ -29,15 +29,6 @@ watchEffect(() => {
 </script>
 
 <style scoped>
-@keyframes flashWhiteGreen {
-  50% { background-color: #48bb78; }
-}
-
-.flash-bg-green {
-  animation: flashWhiteGreen 1s;
-}
-
-
 .typewriter {
   display: inline-block;
   overflow: hidden;
@@ -69,7 +60,7 @@ watchEffect(() => {
 
           <div ref="el" v-for="e in props.elements" :key="e" class="xl:w-1/3 md:w-1/2 sm:w-full p-4">
             
-            <div :class="{'flash-bg-green': isVisible}" class="border border-gray-200 p-6 rounded-lg h-full">
+            <div class="border border-gray-200 p-6 rounded-lg h-full">
               <p class="leading-relaxed text-lg">{{ e }}</p>
             </div>
             
