@@ -28,7 +28,8 @@ const images = ref([
   '/4.jpg',
   '/6.jpg',
   '/7.jpg',
-  '/8.jpg'
+  '/8.jpg',
+  'andrey.jpg'
 ]);
 
 const screenSize = ref('')
@@ -72,7 +73,7 @@ const shouldShowLargeCarousel = computed(() => {
       <div class="container px-5 py-12 mx-auto flex flex-wrap">
         <div class="flex flex-wrap w-full">
 
-          <div class="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
+          <div class="w-full md:pr-10 md:py-6">
 
             <!-- One body element -->
             <div v-for="e in props.elements" :key="e" class="flex relative pb-12">
@@ -103,21 +104,18 @@ const shouldShowLargeCarousel = computed(() => {
               </div>
             </div>
 
-          </div>
-          
-          <NuxtImg src="/andrey.jpg" class="lg:w-1/2 mx-auto md:w-1/3 object-cover object-center rounded-lg md:mt-0 mt-12" />
-          
+          </div>          
         </div>
 
-        <el-carousel v-if="shouldShowSmallCarousel" :interval="4000" type="card" height="250px" class="w-full h-full mt-20">
+        <el-carousel v-show="shouldShowSmallCarousel" :interval="4000" height="300px" class="w-full h-full mt-20">
           <el-carousel-item v-for="item in images" :key="item" class="w-full h-full">
-            <NuxtImg :src="item" class="h-full w-full" alt="" />
+            <NuxtImg :src="item" class="h-full w-full rounded-lg" alt="" />
           </el-carousel-item>
         </el-carousel>
 
-        <el-carousel v-if="shouldShowLargeCarousel" :interval="4000" type="card" height="500px" class="w-full h-full mt-20">
+        <el-carousel v-show="shouldShowLargeCarousel" :interval="4000" type="card" height="500px" class="w-full h-full mt-20">
           <el-carousel-item v-for="item in images" :key="item" class="w-full h-full">
-            <NuxtImg :src="item" class="h-full w-full" alt="" />
+            <NuxtImg :src="item" class="h-full w-full rounded-lg" alt="" />
           </el-carousel-item>
         </el-carousel>
 
