@@ -1,4 +1,7 @@
 <script setup>
+const mode = useColorMode();
+mode.value = 'light'
+
 const childName = ref(null);
 const parentName = ref(null);
 const residence = ref(null);
