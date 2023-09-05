@@ -60,35 +60,35 @@ watchEffect(() => {
           <div class="-mb-44 sm:mb-0 flex flex-col text-xl space-y-10 md:space-y-0 md:grid md:grid-cols-4 md:gap-4">
             
             <div class="flex flex-col items-center">
-              <NuxtImg class="w-36 h-36 object-cover" src="/malishi.jpg" />
+              <NuxtImg class="w-48 h-48 object-cover" src="/malishi.jpg" />
               <UButton class="rounded-lg w-1/2 md:w-full mt-2 bg-gradient-to-br from-violet-500 to-red-500 justify-center" label="Малыши (2-3 года)" @click="isOpen = true; group = 1" />
             </div>
             <div class="flex flex-col items-center">
-              <NuxtImg class="w-36 h-36 object-cover" src="/solnishko.jpg" />
+              <NuxtImg class="w-48 h-48 object-cover" src="/solnishko.jpg" />
               <UButton class="rounded-lg w-1/2 md:w-full mt-2 bg-gradient-to-br from-violet-500 to-red-500 justify-center" label="Солнышко (3-4 года)" @click="isOpen = true; group = 2" />
             </div>
             <div class="flex flex-col items-center">
-              <NuxtImg class="w-36 h-36 object-cover" src="/bukvaryata.jpg" />
+              <NuxtImg class="w-48 h-48 object-cover" src="/bukvaryata.jpg" />
               <UButton class="rounded-lg w-1/2 md:w-full mt-2 bg-gradient-to-br from-violet-500 to-red-500 justify-center" label="Букварята (5-6 лет)" @click="isOpen = true; group = 3" />
             </div>
             <div class="flex flex-col items-center">
-              <NuxtImg class="w-36 h-36 object-cover" src="/znayki.jpg" />
+              <NuxtImg class="w-48 h-48 object-cover" src="/znayki.jpg" />
               <UButton class="rounded-lg w-1/2 md:w-full mt-2 bg-gradient-to-br from-violet-500 to-red-500 justify-center" label="Знайки (6-7 лет)" @click="isOpen = true; group = 4" />
             </div>
             <div class="flex flex-col items-center">
-              <NuxtImg class="w-36 h-36 object-cover" src="/chitayki.jpg" />
+              <NuxtImg class="w-48 h-48 object-cover" src="/chitayki.jpg" />
               <UButton class="rounded-lg w-1/2 md:w-full mt-2 bg-gradient-to-br from-violet-500 to-red-500 justify-center" label="Читайки (7-8 лет)" @click="isOpen = true; group = 5" />
             </div>
             <div class="flex flex-col items-center">
-              <NuxtImg class="w-36 h-36 object-cover" src="/fantazeri.jpg" />
+              <NuxtImg class="w-48 h-48 object-cover" src="/fantazeri.jpg" />
               <UButton class="rounded-lg w-1/2 md:w-full mt-2 bg-gradient-to-br from-violet-500 to-red-500 justify-center" label="Фантазёры (8-9 лет)" @click="isOpen = true; group = 6" />
             </div>
             <div class="flex flex-col items-center">
-              <NuxtImg class="w-36 h-36 object-cover" src="/volshebniki.jpg" />
+              <NuxtImg class="w-48 h-48 object-cover" src="/volshebniki.jpg" />
               <UButton class="rounded-lg w-1/2 md:w-full mt-2 bg-gradient-to-br from-violet-500 to-red-500 justify-center" label="Волшебники (9-11)" @click="isOpen = true; group = 7" />
             </div>
             <div class="flex flex-col items-center">
-              <NuxtImg class="w-36 h-36 object-cover" src="/knigomani.jpg" />
+              <NuxtImg class="w-48 h-48 object-cover" src="/knigomani.jpg" />
               <UButton class="rounded-lg w-1/2 md:w-full mt-2 bg-gradient-to-br from-violet-500 to-red-500 justify-center" label="Книгоманы (11+)" @click="isOpen = true; group = 8" />
             </div>
 
