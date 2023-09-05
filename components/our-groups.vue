@@ -80,7 +80,7 @@ watchEffect(() => {
               <UButton class="rounded-lg w-1/2 md:w-full mt-2 bg-gradient-to-br from-violet-500 to-red-500 justify-center" label="Читайки (7-8 лет)" @click="isOpen = true; group = 5" />
             </div>
             <div class="flex flex-col items-center">
-              <NuxtImg class="w-48 h-48 object-cover" src="/fantazeri.jpg" />
+              <NuxtImg class="w-48 h-48 object-center" src="/fantazeri.jpg" />
               <UButton class="rounded-lg w-1/2 md:w-full mt-2 bg-gradient-to-br from-violet-500 to-red-500 justify-center" label="Фантазёры (8-9 лет)" @click="isOpen = true; group = 6" />
             </div>
             <div class="flex flex-col items-center">
