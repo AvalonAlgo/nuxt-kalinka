@@ -27,7 +27,7 @@ const isOpen = ref(false)
             </div>
           </template>
 
-          <div class="flex flex-col text-xl space-y-2 bg-gradient-to-br from-violet-500 to-red-500 bg-clip-text text-transparent">
+          <div class="font-bold flex flex-col text-xl space-y-2 bg-gradient-to-br from-violet-500 to-red-500 bg-clip-text text-transparent">
             <NuxtLink to="/lesson" @click="isOpen = false" class="flex flex-row">
               Бесплатное занятие
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1 mt-2" viewBox="0 0 24 24">

@@ -1,3 +1,8 @@
+<script setup>
+const mode = useColorMode();
+mode.value = 'light'
+</script>
+
 <template>
   <div>
     <!-- <Header /> -->

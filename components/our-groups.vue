@@ -69,7 +69,7 @@ watchEffect(() => {
           </div>
 
           <UModal v-if="group === 1" v-model="isOpen">
-            <UCard :ui="{ divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
+            <UCard :ui="{ divide: 'divide-y divide-gray-100 dark:divide-gray-800'}">
               
               <template #header>
                 <div class="flex items-center justify-between">
@@ -83,7 +83,7 @@ watchEffect(() => {
                 <br /> 9.00-10.00
               </h2>
 
-              <NuxtImg src="/malishi.jpg" class="rounded-lg mx-auto m-4" />
+              <NuxtImg src="/malishi.jpg" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
 
               <ul class="space-y-2">
                 <li class="border rounded-lg p-2">+ Ваш малыш еще не ходит в садик, но Вы хотите, чтобы он развивался и узнавал новое в коллективе, учился взаимодействовать со сверстниками</li>
@@ -111,7 +111,7 @@ watchEffect(() => {
                 <br /> 10.30-12.00
               </h2>
               
-              <NuxtImg src="/solnishko.png" class="rounded-lg mx-auto m-4" />
+              <NuxtImg src="/solnishko.jpg" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
 
               <ul class="space-y-2">
                 <li class="border rounded-lg p-2">+ Ваш малыш еще не ходит в садик, но Вы хотите, чтобы он развивался и узнавал новое в коллективе, учился взаимодействовать со сверстниками</li>
@@ -139,7 +139,7 @@ watchEffect(() => {
                 <br /> 9.00-11.00
               </h2>
 
-              <NuxtImg src="/bukvaryata.jpg" class="rounded-lg mx-auto m-4" />
+              <NuxtImg src="/bukvaryata.jpg" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
 
               <ul class="space-y-2">
                 <li class="border rounded-lg p-2">+ У Вас не хватает сил и времени на организацию домашнего образовательного процесса</li>
@@ -169,7 +169,7 @@ watchEffect(() => {
                 <br /> 14.00-16.00
               </h2>
 
-              <NuxtImg src="/znayki.jpg" class="rounded-lg mx-auto m-4" />
+              <NuxtImg src="/znayki.jpg" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
 
               <ul class="space-y-2">
                 <li class="border rounded-lg p-2">+ У Вас не хватает сил и времени на организацию домашнего образовательного процесса</li>
@@ -199,7 +199,7 @@ watchEffect(() => {
                 <br /> 11.30-13.30
               </h2>
 
-              <NuxtImg src="/chitayki.png" class="rounded-lg mx-auto m-4" />
+              <NuxtImg src="/chitayki.jpg" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
 
               <ul class="space-y-2">
                 <li class="border rounded-lg p-2">+ У Вас не хватает сил и времени на организацию домашнего образовательного процесса</li>
@@ -229,7 +229,7 @@ watchEffect(() => {
                 <br /> 16.30-18.30
               </h2>
 
-              <NuxtImg src="/fantazyeri.jpg" class="rounded-lg mx-auto m-4" />
+              <NuxtImg src="/fantazeri.jpg" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
 
               <ul class="space-y-2">
                 <li class="border rounded-lg p-2">+ У Вас не хватает сил и времени на организацию домашнего образовательного процесса</li>
@@ -259,7 +259,7 @@ watchEffect(() => {
                 <br /> 17.00-19.00
               </h2>
 
-              <NuxtImg src="/volshebniki.jpg" class="rounded-lg mx-auto m-4" />
+              <NuxtImg src="/volshebniki.jpg" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
 
               <ul class="space-y-2">
                 <li class="border rounded-lg p-2">+ У Вас не хватает сил и времени на организацию домашнего образовательного процесса</li>
@@ -289,7 +289,7 @@ watchEffect(() => {
                 <br /> 17.30-19.30
               </h2>
 
-              <NuxtImg src="/knigomani.jpg" class="rounded-lg mx-auto m-4" />
+              <NuxtImg src="/knigomani.jpg" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
 
               <ul class="space-y-2">
                 <li class="border rounded-lg p-2">+ У Вас не хватает сил и времени на организацию домашнего образовательного процесса</li>
