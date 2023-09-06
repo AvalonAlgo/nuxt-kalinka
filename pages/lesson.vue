@@ -99,7 +99,7 @@ const handleSubmit = async () => {
             <div class="sm:flex sm:items-start">
               <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                 <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
-                  Request In Progress
+                  Запрос выполняется
                 </h3>
                 <div class="mt-2">
                   <p class="text-sm text-gray-500">
@@ -125,7 +125,7 @@ const handleSubmit = async () => {
         </div>
 
         <div class="lg:w-1/2 md:w-2/3 mx-auto">
-          <div class="flex flex-wrap -m-2">
+          <form @submit.prevent="handleSubmit" class="flex flex-wrap -m-2">
 
             <div class="p-2 w-1/2">
               <div class="relative">
@@ -204,14 +204,14 @@ const handleSubmit = async () => {
             </div>
 
             <div class="p-2 w-full flex justify-center">
-              <button @click="handleSubmit" class="text-center w-1/2 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Отправить</button>
+              <button class="text-center w-1/2 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Отправить</button>
             </div>
           
             <div class="p-2 w-full flex justify-center">
               <NuxtLink to="/" class="text-center w-1/2 text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">Вернуться на главную страницу</NuxtLink>
             </div>
           
-          </div>
+          </form>
         </div>
 
       </div>

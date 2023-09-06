@@ -49,7 +49,7 @@ watchEffect(() => {
 
 <template>
   <div>
-    <section class="text-gray-600 body-font lg:mb-20">
+    <section class="text-gray-600 body-font lg:mb-20 -mt-10 sm:-mt-0">
       <div class="container px-5 py-12 mx-auto flex flex-wrap flex-col">
 `
         <div class="flex flex-wrap w-full mb-10 flex-col items-center text-center">
@@ -57,40 +57,40 @@ watchEffect(() => {
         </div>
 
         <div class="flex flex-wrap flex-col mx-auto w-full justify-center sm:justify-start space-y-4">
-          <div class="-mb-44 sm:mb-0 flex flex-col space-y-10 md:space-y-0 md:grid md:grid-cols-4 md:gap-4">
+          <div class="-mb-44 sm:mb-0 flex flex-col space-y-10 sm:space-y-0 md:grid md:grid-cols-4 md:gap-4">
             
-            <div class="flex flex-col items-center">
-              <NuxtImg class="w-48 h-48 object-cover" src="/malishi.jpg" />
-              <UButton color="red" variant="link" class="rounded-lg w-1/2 md:w-full mt-2 bg-white justify-center" label="Малыши (2-3 года)" @click="isOpen = true; group = 1" />
-            </div>
-            <div class="flex flex-col items-center">
-              <NuxtImg class="w-48 h-48 object-cover" src="/solnishko.jpg" />
-              <UButton color="red" variant="link" class="rounded-lg w-1/2 md:w-full mt-2 bg-white justify-center" label="Солнышко (3-4 года)" @click="isOpen = true; group = 2" />
-            </div>
-            <div class="flex flex-col items-center">
-              <NuxtImg class="w-48 h-48 object-cover" src="/bukvaryata.jpg" />
-              <UButton color="red" variant="link" class="rounded-lg w-1/2 md:w-full mt-2 bg-white justify-center" label="Букварята (5-6 лет)" @click="isOpen = true; group = 3" />
-            </div>
-            <div class="flex flex-col items-center">
-              <NuxtImg class="w-48 h-48 object-cover" src="/znayki.jpg" />
-              <UButton color="red" variant="link" class="rounded-lg w-1/2 md:w-full mt-2 bg-white justify-center" label="Знайки (6-7 лет)" @click="isOpen = true; group = 4" />
-            </div>
-            <div class="flex flex-col items-center">
-              <NuxtImg class="w-48 h-48 object-cover" src="/chitayki.jpg" />
-              <UButton color="red" variant="link" class="rounded-lg w-1/2 md:w-full mt-2 bg-white justify-center" label="Читайки (7-8 лет)" @click="isOpen = true; group = 5" />
-            </div>
-            <div class="flex flex-col items-center">
-              <NuxtImg class="w-48 h-48 object-cover" src="/fantazeri.jpg" />
-              <UButton color="red" variant="link" class="rounded-lg w-1/2 md:w-full mt-2 bg-white justify-center" label="Фантазёры (8-9 лет)" @click="isOpen = true; group = 6" />
-            </div>
-            <div class="flex flex-col items-center">
-              <NuxtImg class="w-48 h-48 object-cover" src="/volshebniki.jpg" />
-              <UButton color="red" variant="link" class="rounded-lg w-1/2 md:w-full mt-2 bg-white justify-center" label="Волшебники (9-11)" @click="isOpen = true; group = 7" />
-            </div>
-            <div class="flex flex-col items-center">
-              <NuxtImg class="w-48 h-48 object-cover" src="/knigomani.jpg" />
-              <UButton color="red" variant="link" class="rounded-lg w-1/2 md:w-full mt-2 bg-white justify-center" label="Книгоманы (11+)" @click="isOpen = true; group = 8" />
-            </div>
+            <button class="flex flex-col items-center hover:scale-110 transform-gpu transition-transform duration-300 ease-in-out" @click="isOpen = true; group = 1">
+              <NuxtImg class="w-48 h-48 object-scale-down" src="/malishi.jpg" />
+              <UButton color="red" variant="link" class="underline rounded-lg w-1/2 md:w-full bg-white justify-center" label="Малыши (2-3 года)" @click="isOpen = true; group = 1" />
+            </button>
+            <button class="flex flex-col items-center hover:scale-110 transform-gpu transition-transform duration-300 ease-in-out" @click="isOpen = true; group = 2">
+              <NuxtImg class="w-48 h-48 object-scale-down" src="/solnishko.jpg" />
+              <UButton color="red" variant="link" class="underline rounded-lg w-1/2 md:w-full bg-white justify-center" label="Солнышко (3-4 года)" />
+            </button>
+            <button class="flex flex-col items-center hover:scale-110 transform-gpu transition-transform duration-300 ease-in-out" @click="isOpen = true; group = 3">
+              <NuxtImg class="w-48 h-48 object-scale-down" src="/bukvaryata.jpg" />
+              <UButton color="red" variant="link" class="underline rounded-lg w-1/2 md:w-full bg-white justify-center" label="Букварята (5-6 лет)" />
+            </button>
+            <button class="flex flex-col items-center hover:scale-110 transform-gpu transition-transform duration-300 ease-in-out" @click="isOpen = true; group = 4">
+              <NuxtImg class="w-48 h-48 object-scale-down" src="/znayki.jpg" />
+              <UButton color="red" variant="link" class="underline rounded-lg w-1/2 md:w-full bg-white justify-center" label="Знайки (6-7 лет)" />
+            </button>
+            <button class="flex flex-col items-center hover:scale-110 transform-gpu transition-transform duration-300 ease-in-out" @click="isOpen = true; group = 5">
+              <NuxtImg class="w-48 h-48 object-scale-down" src="/chitayki.jpg" />
+              <UButton color="red" variant="link" class="underline rounded-lg w-1/2 md:w-full bg-white justify-center" label="Читайки (7-8 лет)" />
+            </button>
+            <button class="flex flex-col items-center hover:scale-110 transform-gpu transition-transform duration-300 ease-in-out" @click="isOpen = true; group = 6">
+              <NuxtImg class="w-48 h-48 object-scale-down" src="/fantazeri.jpg" />
+              <UButton color="red" variant="link" class="underline rounded-lg w-1/2 md:w-full bg-white justify-center" label="Фантазёры (8-9 лет)" />
+            </button>
+            <button class="flex flex-col items-center hover:scale-110 transform-gpu transition-transform duration-300 ease-in-out" @click="isOpen = true; group = 7">
+              <NuxtImg class="w-48 h-48 object-scale-down" src="/volshebniki.jpg" />
+              <UButton color="red" variant="link" class="underline rounded-lg w-1/2 md:w-full bg-white justify-center" label="Волшебники (9-11)" />
+            </button>
+            <button class="flex flex-col items-center hover:scale-110 transform-gpu transition-transform duration-300 ease-in-out" @click="isOpen = true; group = 8">
+              <NuxtImg class="w-48 h-48 object-scale-down" src="/knigomani.jpg" />
+              <UButton color="red" variant="link" class="underline rounded-lg w-1/2 md:w-full bg-white justify-center" label="Книгоманы (11+)" />
+            </button>
 
             <!-- <UButton class="bg-gradient-to-br from-violet-500 to-red-500 justify-center" label="Малыши (2-3 года)" @click="isOpen = true; group = 1" /> -->
             <!-- <UButton class="bg-gradient-to-br from-violet-500 to-red-500 justify-center" label="Солнышко (3-4 года)" @click="isOpen = true; group = 2" /> -->
