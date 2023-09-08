@@ -26,20 +26,36 @@ watchEffect(() => {
 });
 
 const groups = [
-  ["/malishi.jpg", 1, 'Малыши (2-3 года)'],
-  ["/solnishko.jpg", 2, 'Солнышко (3-4 года)'],
-  ["/bukvaryata.jpg", 3, 'Букварята (5-6 лет)'],
-  ["/znayki.jpg", 4, 'Знайки (6-7 лет)'],
-  ["/chitayki.jpg", 5, 'Читайки (7-8 лет)'],
-  ["/fantazeri.jpg", 6, 'Фантазёры (8-9 лет)'],
-  ["/volshebniki.jpg", 7, 'Волшебники (9-11)'],
-  ["/knigomani.jpg", 8, 'Книгоманы (11+)']
+  ["/malishi.jpg", 1, 'Малыши (2-3 года)', 'Вторник, пятница', '9.00-10.00'],
+  ["/solnishko.jpg", 2, 'Солнышко (3-4 года)', 'Вторник, пятница', '10.30-12.00'],
+  ["/bukvaryata.jpg", 3, 'Букварята (5-6 лет)', 'Суббота', '9.00-11.00'],
+  ["/znayki.jpg", 4, 'Знайки (6-7 лет)', 'Суббота', '14.00-16.00'],
+  ["/chitayki.jpg", 5, 'Читайки (7-8 лет)', 'Суббота', '11.30-13.30'],
+  ["/fantazeri.jpg", 6, 'Фантазёры (8-9 лет)', 'Суббота', '16.30-18.30'],
+  ["/volshebniki.jpg", 7, 'Волшебники (9-11)', 'Пятница', '17.00-19.00'],
+  ["/knigomani.jpg", 8, 'Книгоманы (11+)', 'Среда', '17.30-19.30']
 ];
 
-function handleCombinedClick(groupNumber) {
-  isOpen = true;
-  group = groupNumber;
-}
+// List of cheerful colors that children might find appealing
+const cheerfulColors = [
+  '#FFC3A0', // peach
+  '#FFD700', // gold
+  '#32CD32', // lime green
+  '#00CED1', // turquoise blue
+  '#FF6B6B', // pink red
+  '#A463F2', // bright purple
+  '#FFA07A', // light salmon
+  '#20B2AA', // light sea green
+  '#FF4500'  // orange red
+];
+
+// Method to get a random cheerful color
+const randomCheerfulColor = () => {
+  const randomIndex = Math.floor(Math.random() * cheerfulColors.length);
+  const chosenColor = cheerfulColors[randomIndex];
+  // cheerfulColors.splice(randomIndex, 1);
+  return chosenColor;
+};
 </script>
 
 <style scoped>
@@ -96,12 +112,58 @@ function handleCombinedClick(groupNumber) {
 
               <NuxtImg src="/malishi.jpg" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
 
-              <ul class="space-y-2">
-                <li class="border rounded-lg p-2">+ Ваш малыш еще не ходит в садик, но Вы хотите, чтобы он развивался и узнавал новое в коллективе, учился взаимодействовать со сверстниками</li>
-                <li class="border rounded-lg p-2">+ Вам сложно  организовать игровые занятия дома, не хватает времени</li>
-                <li class="border rounded-lg p-2">+ Вы хотите найти друзей Вашему малышу, с которыми бы он общался на русском языке</li>
-                <li class="border rounded-lg p-2">+ Вы хотите разговорить ребенка, но самостоятельно не получается</li>
-                <li class="border rounded-lg p-2">+ Вы хотите , чтобы ребенок участвовал в утренниках как в Вашем детстве</li>
+              <ul class="space-y-2 font-semibold">
+
+                <li class="border rounded-lg p-2 flex flex-row">
+                  <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                      <path d="M22 4L12 14.01l-3-3"></path>
+                    </svg>
+                  </div>
+                  Ваш малыш еще не ходит в садик, но Вы хотите, чтобы он развивался и узнавал новое в коллективе, учился взаимодействовать со сверстниками
+                </li>
+
+                <li class="border rounded-lg p-2 flex flex-row">
+                  <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                      <path d="M22 4L12 14.01l-3-3"></path>
+                    </svg>
+                  </div>
+                  Вам сложно  организовать игровые занятия дома, не хватает времени
+                </li>
+
+                <li class="border rounded-lg p-2 flex flex-row">
+                  <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                      <path d="M22 4L12 14.01l-3-3"></path>
+                    </svg>
+                  </div>
+                  Вы хотите найти друзей Вашему малышу, с которыми бы он общался на русском языке
+                </li>
+
+                <li class="border rounded-lg p-2 flex flex-row">
+                  <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                      <path d="M22 4L12 14.01l-3-3"></path>
+                    </svg>
+                    </div>
+                    Вы хотите разговорить ребенка, но самостоятельно не получается
+                </li>
+
+                <li class="border rounded-lg p-2 flex flex-row">
+                  <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                      <path d="M22 4L12 14.01l-3-3"></path>
+                    </svg>
+                  </div>
+                  Вы хотите , чтобы ребенок участвовал в утренниках как в Вашем детстве
+                </li>
+
               </ul>
 
             </UCard>
@@ -124,12 +186,58 @@ function handleCombinedClick(groupNumber) {
               
               <NuxtImg src="/solnishko.jpg" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
 
-              <ul class="space-y-2">
-                <li class="border rounded-lg p-2">+ Ваш малыш еще не ходит в садик, но Вы хотите, чтобы он развивался и узнавал новое в коллективе, учился взаимодействовать со сверстниками</li>
-                <li class="border rounded-lg p-2">+ Вам сложно  организовать игровые занятия дома, не хватает времени</li>
-                <li class="border rounded-lg p-2">+ Вы хотите найти друзей Вашему малышу, с которыми бы он общался на русском языке</li>
-                <li class="border rounded-lg p-2">+ Вы хотите разговорить ребенка, но самостоятельно не получается</li>
-                <li class="border rounded-lg p-2">+ Вы хотите , чтобы ребенок участвовал в утренниках как в Вашем детстве</li>
+              <ul class="space-y-2 font-semibold">
+
+                <li class="border rounded-lg p-2 flex flex-row">
+                  <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                      <path d="M22 4L12 14.01l-3-3"></path>
+                    </svg>
+                  </div>
+                  Ваш малыш еще не ходит в садик, но Вы хотите, чтобы он развивался и узнавал новое в коллективе, учился взаимодействовать со сверстниками
+                </li>
+
+                <li class="border rounded-lg p-2 flex flex-row">
+                  <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                      <path d="M22 4L12 14.01l-3-3"></path>
+                    </svg>
+                  </div>
+                  Вам сложно  организовать игровые занятия дома, не хватает времени
+                </li>
+
+                <li class="border rounded-lg p-2 flex flex-row">
+                  <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                      <path d="M22 4L12 14.01l-3-3"></path>
+                    </svg>
+                  </div>
+                  Вы хотите найти друзей Вашему малышу, с которыми бы он общался на русском языке
+                </li>
+
+                <li class="border rounded-lg p-2 flex flex-row">
+                  <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                      <path d="M22 4L12 14.01l-3-3"></path>
+                    </svg>
+                    </div>
+                    Вы хотите разговорить ребенка, но самостоятельно не получается
+                </li>
+
+                <li class="border rounded-lg p-2 flex flex-row">
+                  <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                      <path d="M22 4L12 14.01l-3-3"></path>
+                    </svg>
+                  </div>
+                  Вы хотите , чтобы ребенок участвовал в утренниках как в Вашем детстве
+                </li>
+
               </ul>
 
             </UCard>
@@ -152,14 +260,78 @@ function handleCombinedClick(groupNumber) {
 
               <NuxtImg src="/bukvaryata.jpg" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
 
-              <ul class="space-y-2">
-                <li class="border rounded-lg p-2">+ У Вас не хватает сил и времени на организацию домашнего образовательного процесса</li>
-                <li class="border rounded-lg p-2">+ Вы хотите укрепить мотивацию ребенка изучать русский язык</li>
-                <li class="border rounded-lg p-2">+ Вам важно, чтобы занятия были интересны самому ребенку и чтобы Вы  видели результаты</li>
-                <li class="border rounded-lg p-2">+ Вы не можете найти курсы русского языка, чтобы Ваш ребенок учился с ровесниками</li>
-                <li class="border rounded-lg p-2">+ Вы хотите, чтобы Ваш ребенок не сильно отставал от своих ровесников в странах СНГ и в случае переезда смог быстро наверстать программу русского языка общеобразовательной школы</li>
-                <li class="border rounded-lg p-2">+ Вам важно, чтобы помимо русского языка ребенок изучал Литературу, Окружающий Мир, Историю и обогатил родную речь</li>
-                <li class="border rounded-lg p-2">+ Вы хотите найти русскоязычную среду для Вашего ребенка и себя, т.к. вам сложно адаптироваться после недавнего переезда в Турцию</li>
+              <ul class="space-y-2 font-semibold">
+
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    У Вас не хватает сил и времени на организацию домашнего образовательного процесса
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вы хотите укрепить мотивацию ребенка изучать русский язык
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вам важно, чтобы занятия были интересны самому ребенку и чтобы Вы видели результаты
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вы не можете найти курсы русского языка, чтобы Ваш ребенок учился с ровесниками
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вы хотите, чтобы Ваш ребенок не сильно отставал от своих ровесников в странах СНГ и в случае переезда смог быстро наверстать программу русского языка общеобразовательной школы
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вам важно, чтобы помимо русского языка ребенок изучал Литературу, Окружающий Мир, Историю и обогатил родную речь
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вы хотите найти русскоязычную среду для Вашего ребенка и себя, т.к. вам сложно адаптироваться после недавнего переезда в Турцию
+                </li>
+            
               </ul>
 
             </UCard>
@@ -182,14 +354,78 @@ function handleCombinedClick(groupNumber) {
 
               <NuxtImg src="/znayki.jpg" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
 
-              <ul class="space-y-2">
-                <li class="border rounded-lg p-2">+ У Вас не хватает сил и времени на организацию домашнего образовательного процесса</li>
-                <li class="border rounded-lg p-2">+ Вы хотите укрепить мотивацию ребенка изучать русский язык</li>
-                <li class="border rounded-lg p-2">+ Вам важно, чтобы занятия были интересны самому ребенку и чтобы Вы  видели результаты</li>
-                <li class="border rounded-lg p-2">+ Вы не можете найти курсы русского языка, чтобы Ваш ребенок учился с ровесниками</li>
-                <li class="border rounded-lg p-2">+ Вы хотите, чтобы Ваш ребенок не сильно отставал от своих ровесников в странах СНГ и в случае переезда смог быстро наверстать программу русского языка общеобразовательной школы</li>
-                <li class="border rounded-lg p-2">+ Вам важно, чтобы помимо русского языка ребенок изучал Литературу, Окружающий Мир, Историю и обогатил родную речь</li>
-                <li class="border rounded-lg p-2">+ Вы хотите найти русскоязычную среду для Вашего ребенка и себя, т.к. вам сложно адаптироваться после недавнего переезда в Турцию</li>
+              <ul class="space-y-2 font-semibold">
+
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    У Вас не хватает сил и времени на организацию домашнего образовательного процесса
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вы хотите укрепить мотивацию ребенка изучать русский язык
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вам важно, чтобы занятия были интересны самому ребенку и чтобы Вы видели результаты
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вы не можете найти курсы русского языка, чтобы Ваш ребенок учился с ровесниками
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вы хотите, чтобы Ваш ребенок не сильно отставал от своих ровесников в странах СНГ и в случае переезда смог быстро наверстать программу русского языка общеобразовательной школы
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вам важно, чтобы помимо русского языка ребенок изучал Литературу, Окружающий Мир, Историю и обогатил родную речь
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вы хотите найти русскоязычную среду для Вашего ребенка и себя, т.к. вам сложно адаптироваться после недавнего переезда в Турцию
+                </li>
+            
               </ul>
 
             </UCard>
@@ -212,14 +448,78 @@ function handleCombinedClick(groupNumber) {
 
               <NuxtImg src="/chitayki.jpg" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
 
-              <ul class="space-y-2">
-                <li class="border rounded-lg p-2">+ У Вас не хватает сил и времени на организацию домашнего образовательного процесса</li>
-                <li class="border rounded-lg p-2">+ Вы хотите укрепить мотивацию ребенка изучать русский язык</li>
-                <li class="border rounded-lg p-2">+ Вам важно, чтобы занятия были интересны самому ребенку и чтобы Вы  видели результаты</li>
-                <li class="border rounded-lg p-2">+ Вы не можете найти курсы русского языка, чтобы Ваш ребенок учился с ровесниками</li>
-                <li class="border rounded-lg p-2">+ Вы хотите, чтобы Ваш ребенок не сильно отставал от своих ровесников в странах СНГ и в случае переезда смог быстро наверстать программу русского языка общеобразовательной школы</li>
-                <li class="border rounded-lg p-2">+ Вам важно, чтобы помимо русского языка ребенок изучал Литературу, Окружающий Мир, Историю и обогатил родную речь</li>
-                <li class="border rounded-lg p-2">+ Вы хотите найти русскоязычную среду для Вашего ребенка и себя, т.к. вам сложно адаптироваться после недавнего переезда в Турцию</li>
+              <ul class="space-y-2 font-semibold">
+
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    У Вас не хватает сил и времени на организацию домашнего образовательного процесса
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вы хотите укрепить мотивацию ребенка изучать русский язык
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вам важно, чтобы занятия были интересны самому ребенку и чтобы Вы видели результаты
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вы не можете найти курсы русского языка, чтобы Ваш ребенок учился с ровесниками
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вы хотите, чтобы Ваш ребенок не сильно отставал от своих ровесников в странах СНГ и в случае переезда смог быстро наверстать программу русского языка общеобразовательной школы
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вам важно, чтобы помимо русского языка ребенок изучал Литературу, Окружающий Мир, Историю и обогатил родную речь
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вы хотите найти русскоязычную среду для Вашего ребенка и себя, т.к. вам сложно адаптироваться после недавнего переезда в Турцию
+                </li>
+            
               </ul>
 
             </UCard>
@@ -242,14 +542,78 @@ function handleCombinedClick(groupNumber) {
 
               <NuxtImg src="/fantazeri.jpg" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
 
-              <ul class="space-y-2">
-                <li class="border rounded-lg p-2">+ У Вас не хватает сил и времени на организацию домашнего образовательного процесса</li>
-                <li class="border rounded-lg p-2">+ Вы хотите укрепить мотивацию ребенка изучать русский язык</li>
-                <li class="border rounded-lg p-2">+ Вам важно, чтобы занятия были интересны самому ребенку и чтобы Вы  видели результаты</li>
-                <li class="border rounded-lg p-2">+ Вы не можете найти курсы русского языка, чтобы Ваш ребенок учился с ровесниками</li>
-                <li class="border rounded-lg p-2">+ Вы хотите, чтобы Ваш ребенок не сильно отставал от своих ровесников в странах СНГ и в случае переезда смог быстро наверстать программу русского языка общеобразовательной школы</li>
-                <li class="border rounded-lg p-2">+ Вам важно, чтобы помимо русского языка ребенок изучал Литературу, Окружающий Мир, Историю и обогатил родную речь</li>
-                <li class="border rounded-lg p-2">+ Вы хотите найти русскоязычную среду для Вашего ребенка и себя, т.к. вам сложно адаптироваться после недавнего переезда в Турцию</li>
+              <ul class="space-y-2 font-semibold">
+
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    У Вас не хватает сил и времени на организацию домашнего образовательного процесса
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вы хотите укрепить мотивацию ребенка изучать русский язык
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вам важно, чтобы занятия были интересны самому ребенку и чтобы Вы видели результаты
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вы не можете найти курсы русского языка, чтобы Ваш ребенок учился с ровесниками
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вы хотите, чтобы Ваш ребенок не сильно отставал от своих ровесников в странах СНГ и в случае переезда смог быстро наверстать программу русского языка общеобразовательной школы
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вам важно, чтобы помимо русского языка ребенок изучал Литературу, Окружающий Мир, Историю и обогатил родную речь
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вы хотите найти русскоязычную среду для Вашего ребенка и себя, т.к. вам сложно адаптироваться после недавнего переезда в Турцию
+                </li>
+            
               </ul>
 
             </UCard>
@@ -272,14 +636,78 @@ function handleCombinedClick(groupNumber) {
 
               <NuxtImg src="/volshebniki.jpg" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
 
-              <ul class="space-y-2">
-                <li class="border rounded-lg p-2">+ У Вас не хватает сил и времени на организацию домашнего образовательного процесса</li>
-                <li class="border rounded-lg p-2">+ Вы хотите укрепить мотивацию ребенка изучать русский язык</li>
-                <li class="border rounded-lg p-2">+ Вам важно, чтобы занятия были интересны самому ребенку и чтобы Вы  видели результаты</li>
-                <li class="border rounded-lg p-2">+ Вы не можете найти курсы русского языка, чтобы Ваш ребенок учился с ровесниками</li>
-                <li class="border rounded-lg p-2">+ Вы хотите, чтобы Ваш ребенок не сильно отставал от своих ровесников в странах СНГ и в случае переезда смог быстро наверстать программу русского языка общеобразовательной школы</li>
-                <li class="border rounded-lg p-2">+ Вам важно, чтобы помимо русского языка ребенок изучал Литературу, Окружающий Мир, Историю и обогатил родную речь</li>
-                <li class="border rounded-lg p-2">+ Вы хотите найти русскоязычную среду для Вашего ребенка и себя, т.к. вам сложно адаптироваться после недавнего переезда в Турцию</li>
+              <ul class="space-y-2 font-semibold">
+
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    У Вас не хватает сил и времени на организацию домашнего образовательного процесса
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вы хотите укрепить мотивацию ребенка изучать русский язык
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вам важно, чтобы занятия были интересны самому ребенку и чтобы Вы видели результаты
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вы не можете найти курсы русского языка, чтобы Ваш ребенок учился с ровесниками
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вы хотите, чтобы Ваш ребенок не сильно отставал от своих ровесников в странах СНГ и в случае переезда смог быстро наверстать программу русского языка общеобразовательной школы
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вам важно, чтобы помимо русского языка ребенок изучал Литературу, Окружающий Мир, Историю и обогатил родную речь
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вы хотите найти русскоязычную среду для Вашего ребенка и себя, т.к. вам сложно адаптироваться после недавнего переезда в Турцию
+                </li>
+            
               </ul>
 
             </UCard>
@@ -302,18 +730,83 @@ function handleCombinedClick(groupNumber) {
 
               <NuxtImg src="/knigomani.jpg" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
 
-              <ul class="space-y-2">
-                <li class="border rounded-lg p-2">+ У Вас не хватает сил и времени на организацию домашнего образовательного процесса</li>
-                <li class="border rounded-lg p-2">+ Вы хотите укрепить мотивацию ребенка изучать русский язык</li>
-                <li class="border rounded-lg p-2">+ Вам важно, чтобы занятия были интересны самому ребенку и чтобы Вы  видели результаты</li>
-                <li class="border rounded-lg p-2">+ Вы не можете найти курсы русского языка, чтобы Ваш ребенок учился с ровесниками</li>
-                <li class="border rounded-lg p-2">+ Вы хотите, чтобы Ваш ребенок не сильно отставал от своих ровесников в странах СНГ и в случае переезда смог быстро наверстать программу русского языка общеобразовательной школы</li>
-                <li class="border rounded-lg p-2">+ Вам важно, чтобы помимо русского языка ребенок изучал Литературу, Окружающий Мир, Историю и обогатил родную речь</li>
-                <li class="border rounded-lg p-2">+ Вы хотите найти русскоязычную среду для Вашего ребенка и себя, т.к. вам сложно адаптироваться после недавнего переезда в Турцию</li>
+              <ul class="space-y-2 font-semibold">
+
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    У Вас не хватает сил и времени на организацию домашнего образовательного процесса
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вы хотите укрепить мотивацию ребенка изучать русский язык
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вам важно, чтобы занятия были интересны самому ребенку и чтобы Вы видели результаты
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вы не можете найти курсы русского языка, чтобы Ваш ребенок учился с ровесниками
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вы хотите, чтобы Ваш ребенок не сильно отставал от своих ровесников в странах СНГ и в случае переезда смог быстро наверстать программу русского языка общеобразовательной школы
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вам важно, чтобы помимо русского языка ребенок изучал Литературу, Окружающий Мир, Историю и обогатил родную речь
+                </li>
+            
+                <li class="border rounded-lg p-2 flex flex-row">
+                    <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    Вы хотите найти русскоязычную среду для Вашего ребенка и себя, т.к. вам сложно адаптироваться после недавнего переезда в Турцию
+                </li>
+            
               </ul>
 
             </UCard>
           </UModal>
+
         </div>
 
       </div>
