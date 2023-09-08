@@ -4,13 +4,13 @@ const isOpen = ref(false)
 
 <template>
   <header class="text-gray-600 body-font">
-    <div class="container mx-auto flex flex-row p-5 items-center justify-between">
+    <div class="container mx-auto flex flex-row p-4 items-center justify-between">
 
       <NuxtLink to="/" class="w-3/5 object-cover my-auto rounded">
         <NuxtImg alt="hero" src="/kalinka-logo.jpg" />
       </NuxtLink>
 
-      <UButton label="Open" @click="isOpen = true" color="red">
+      <UButton label="Open" @click="isOpen = true" color="red" class="right-0">
         Навигация
         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
           <path d="M5 12h14M12 5l7 7-7 7"></path>
