@@ -70,7 +70,7 @@ const shouldShowLargeCarousel = computed(() => {
   
   <div>
     <section class="text-gray-600 body-font">
-      <div class="container px-5 py-12 mx-auto flex flex-wrap">
+      <div class="container px-5 py-12 -mt-4 mx-auto flex flex-wrap">
 
         <div class="flex flex-col sm:flex-row flex-wrap w-full">
 
