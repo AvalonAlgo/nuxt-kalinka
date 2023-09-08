@@ -112,6 +112,10 @@ const randomCheerfulColor = () => {
 
               <NuxtImg src="/malishi.jpg" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
 
+              <h2 class="text-lg text-center my-4">
+                Эта группа подойдёт вам, если...
+              </h2>
+
               <ul class="space-y-2 font-semibold">
 
                 <li class="border rounded-lg p-2 flex flex-row">
@@ -186,6 +190,10 @@ const randomCheerfulColor = () => {
               
               <NuxtImg src="/solnishko.jpg" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
 
+              <h2 class="text-lg text-center my-4">
+                Эта группа подойдёт вам, если...
+              </h2>
+
               <ul class="space-y-2 font-semibold">
 
                 <li class="border rounded-lg p-2 flex flex-row">
@@ -259,6 +267,10 @@ const randomCheerfulColor = () => {
               </h2>
 
               <NuxtImg src="/bukvaryata.jpg" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
+
+              <h2 class="text-lg text-center my-4">
+                Эта группа подойдёт вам, если...
+              </h2>
 
               <ul class="space-y-2 font-semibold">
 
@@ -354,6 +366,10 @@ const randomCheerfulColor = () => {
 
               <NuxtImg src="/znayki.jpg" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
 
+              <h2 class="text-lg text-center my-4">
+                Эта группа подойдёт вам, если...
+              </h2>
+
               <ul class="space-y-2 font-semibold">
 
                 <li class="border rounded-lg p-2 flex flex-row">
@@ -447,6 +463,10 @@ const randomCheerfulColor = () => {
               </h2>
 
               <NuxtImg src="/chitayki.jpg" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
+
+              <h2 class="text-lg text-center my-4">
+                Эта группа подойдёт вам, если...
+              </h2>
 
               <ul class="space-y-2 font-semibold">
 
@@ -542,6 +562,10 @@ const randomCheerfulColor = () => {
 
               <NuxtImg src="/fantazeri.jpg" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
 
+              <h2 class="text-lg text-center my-4">
+                Эта группа подойдёт вам, если...
+              </h2>
+
               <ul class="space-y-2 font-semibold">
 
                 <li class="border rounded-lg p-2 flex flex-row">
@@ -635,6 +659,10 @@ const randomCheerfulColor = () => {
               </h2>
 
               <NuxtImg src="/volshebniki.jpg" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
+
+              <h2 class="text-lg text-center my-4">
+                Эта группа подойдёт вам, если...
+              </h2>
 
               <ul class="space-y-2 font-semibold">
 
@@ -730,6 +758,10 @@ const randomCheerfulColor = () => {
 
               <NuxtImg src="/knigomani.jpg" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
 
+              <h2 class="text-lg text-center my-4">
+                Эта группа подойдёт вам, если...
+              </h2>
+              
               <ul class="space-y-2 font-semibold">
 
                 <li class="border rounded-lg p-2 flex flex-row">
