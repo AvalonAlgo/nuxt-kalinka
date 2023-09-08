@@ -71,9 +71,10 @@ const shouldShowLargeCarousel = computed(() => {
   <div>
     <section class="text-gray-600 body-font">
       <div class="container px-5 py-12 mx-auto flex flex-wrap">
-        <div class="flex flex-wrap w-full">
 
-          <div class="w-full md:pr-10 md:py-6">
+        <div class="flex flex-col sm:flex-row flex-wrap w-full">
+
+          <div class="w-full sm:w-1/2 md:pr-10 md:py-6">
 
             <!-- One body element -->
             <div v-for="e in props.elements" :key="e" class="flex relative pb-12">
@@ -104,7 +105,12 @@ const shouldShowLargeCarousel = computed(() => {
               </div>
             </div>
 
-          </div>          
+          </div>
+
+          <div class="w-full sm:w-1/2 text-center mt-10 sm:my-auto">
+            <h1 class="bg-gradient-to-r from-indigo-500 to-red-500 bg-clip-text text-transparent title-font font-semibold leading-relaxed text-2xl sm:text-3xl italic">Обучаем детей русскому языку, истории и культуре и помогаем разговорить детей на русском языке</h1>
+          </div>
+
         </div>
 
         <el-carousel v-show="shouldShowSmallCarousel" indicator-position="none" :interval="4000" height="270px" class="w-full h-full mt-20">
