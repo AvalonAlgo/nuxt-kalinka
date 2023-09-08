@@ -1,13 +1,14 @@
 <script setup>
 const props = defineProps({
   image: String,
-  group: Number
+  group: Number,
+  name: String
 })
 </script>
 
 <template>
   <div class="mx-auto cursor-pointer flex flex-col items-center hover:scale-110 transform-gpu transition-transform duration-300 ease-in-out" @click="$emit('handleClick', props.group)">
     <NuxtImg class="w-48 h-48 object-scale-down" :src="image" />
-    <UButton color="red" variant="link" class="mb-4 underline rounded-lg w-1/2 md:w-full bg-white justify-center" label="Малыши (2-3 года)" />
+    <UButton color="red" variant="link" class="mb-4 underline rounded-lg w-1/2 md:w-full bg-white justify-center" :label="name" />
   </div>
 </template>

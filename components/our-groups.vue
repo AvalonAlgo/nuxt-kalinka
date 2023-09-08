@@ -26,14 +26,14 @@ watchEffect(() => {
 });
 
 const groups = [
-  ["/malishi.jpg", 1],
-  ["/solnishko.jpg", 2],
-  ["/bukvaryata.jpg", 3],
-  ["/znayki.jpg", 4],
-  ["/chitayki.jpg", 5],
-  ["/fantazeri.jpg", 6],
-  ["/volshebniki.jpg", 7],
-  ["/knigomani.jpg", 8]
+  ["/malishi.jpg", 1, 'Малыши (2-3 года)'],
+  ["/solnishko.jpg", 2, 'Солнышко (3-4 года)'],
+  ["/bukvaryata.jpg", 3, 'Букварята (5-6 лет)'],
+  ["/znayki.jpg", 4, 'Знайки (6-7 лет)'],
+  ["/chitayki.jpg", 5, 'Читайки (7-8 лет)'],
+  ["/fantazeri.jpg", 6, 'Фантазёры (8-9 лет)'],
+  ["/volshebniki.jpg", 7, 'Волшебники (9-11)'],
+  ["/knigomani.jpg", 8, 'Книгоманы (11+)']
 ];
 
 function handleCombinedClick(groupNumber) {
@@ -75,7 +75,7 @@ function handleCombinedClick(groupNumber) {
         <div class="flex flex-wrap flex-col mx-auto w-full justify-center sm:justify-start space-y-4">
           <div class="-mb-44 sm:mb-0 flex flex-col space-y-10 sm:space-y-0 md:grid md:grid-cols-4 md:gap-4">
             
-            <GroupCard v-for="data in groups" :key="data" :image="data[0]" :group="data[1]" @handleClick="(n) => group = n" @click="isOpen = true" />
+            <GroupCard v-for="data in groups" :key="data" :image="data[0]" :group="data[1]" :name="data[2]" @handleClick="(n) => group = n" @click="isOpen = true" />
 
           </div>
 
