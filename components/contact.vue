@@ -81,7 +81,7 @@ const handleSubmit = async () => {
       </div>
     </div>
 
-    <section id="contact" class="text-gray-600 body-font relative">
+    <section class="text-gray-600 body-font relative">
       <div class="container px-5 py-12 mx-auto flex sm:flex-nowrap flex-wrap">
         <div class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
           <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="          https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d895.383687426372!2d29.137319925214022!3d40.98805541989122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac9f6ac2d0655%3A0xc4504223222b626e!2zQm90YW5payDDh2FyxZ_EsQ!5e0!3m2!1sen!2str!4v1692736321733!5m2!1sen!2str" style="contrast(1.2) opacity(0.4);"></iframe>

@@ -1,8 +1,3 @@
-<script setup>
-import { TresCanvas } from '@tresjs/core';
-import { OrbitControls, GLTFModel } from '@tresjs/cientos';
-</script>
-
 <template>
   <div>
     <section class="body-font">

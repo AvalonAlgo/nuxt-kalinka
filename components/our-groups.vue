@@ -59,13 +59,22 @@ const randomCheerfulColor = () => {
 
 const iconNumbers = [1, 2, 3, 7, 8, 9, 10, 13, 14, 16];
 const basePath = "/icons/Untitled-";
-
 const icons = iconNumbers.map(num => `${basePath}${num}.png`);
 
-// Function to get a random icon
+let unusedIcons = [...icons];  // Clone the icons array
+
 const getRandomIcon = () => {
-  const randomIndex = Math.floor(Math.random() * icons.length);
-  return icons[randomIndex];
+  if (unusedIcons.length === 0) {
+    unusedIcons = [...icons];  // Reset if all icons have been used
+  }
+
+  const randomIndex = Math.floor(Math.random() * unusedIcons.length);
+  const chosenIcon = unusedIcons[randomIndex];
+  
+  // Remove the chosen icon from the unusedIcons array
+  unusedIcons = unusedIcons.filter(icon => icon !== chosenIcon);
+  
+  return chosenIcon;
 };
 </script>
 

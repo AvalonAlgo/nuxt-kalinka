@@ -18,7 +18,7 @@ const isOpen = ref(false)
       </UButton>
 
       <USlideover v-model="isOpen" prevent-close class="opacity-95">
-        <UCard class="flex flex-col flex-1" :ui="{ body: { base: 'flex-1' }, ring: '', divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
+        <UCard class="flex flex-col flex-1" :ui="{ body: { base: 'flex-1' }, overlay: { background: 'bg-white' }, ring: '', divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
           <template #header>
             <div class="flex items-center justify-between">
               <h3 class="text-base font-semibold leading-6 text-gray-900 dark:text-white">
@@ -29,6 +29,12 @@ const isOpen = ref(false)
           </template>
 
           <div class="font-bold flex flex-col text-xl space-y-2 bg-gradient-to-br from-violet-500 to-red-500 bg-clip-text text-transparent">
+            <NuxtLink to="/#groups" @click="isOpen = false" class="flex flex-row">
+              Наши группы
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1 mt-2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </NuxtLink>
             <NuxtLink to="/lesson" @click="isOpen = false" class="flex flex-row">
               Бесплатное занятие
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1 mt-2" viewBox="0 0 24 24">
