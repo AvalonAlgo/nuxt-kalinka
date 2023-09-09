@@ -74,6 +74,10 @@ const shouldShowLargeCarousel = computed(() => {
 
         <div class="flex flex-col sm:flex-row flex-wrap w-full">
 
+          <div class="w-full sm:w-1/2 text-center -mt-10 mb-10 sm:my-auto mx-auto">
+            <h1 class="bg-gradient-to-r from-indigo-500 to-red-500 bg-clip-text text-transparent title-font font-semibold leading-relaxed text-2xl sm:text-3xl italic">Обучаем детей русскому языку, истории и культуре и помогаем разговорить детей на русском языке</h1>
+          </div>
+
           <div class="w-full sm:w-1/2 md:pr-10 md:py-6">
 
             <!-- One body element -->
@@ -105,10 +109,6 @@ const shouldShowLargeCarousel = computed(() => {
               </div>
             </div>
 
-          </div>
-
-          <div class="w-full sm:w-1/2 text-center mt-10 sm:my-auto">
-            <h1 class="bg-gradient-to-r from-indigo-500 to-red-500 bg-clip-text text-transparent title-font font-semibold leading-relaxed text-2xl sm:text-3xl italic">Обучаем детей русскому языку, истории и культуре и помогаем разговорить детей на русском языке</h1>
           </div>
 
         </div>

@@ -28,7 +28,7 @@ watchEffect(() => {
 const groups = [
   ["/malishi.jpg", 1, 'Малыши (2-3 года)', 'Вторник, пятница', '9.00-10.00'],
   ["/solnishko.jpg", 2, 'Солнышко (3-4 года)', 'Вторник, пятница', '10.30-12.00'],
-  ["/bukvaryata.jpg", 3, 'Букварята (5-6 лет)', 'Суббота', '9.00-11.00'],
+  ["/bukvaryata1.jpg", 3, 'Букварята (5-6 лет)', 'Суббота', '9.00-11.00'],
   ["/znayki.jpg", 4, 'Знайки (6-7 лет)', 'Суббота', '14.00-16.00'],
   ["/chitayki.jpg", 5, 'Читайки (7-8 лет)', 'Суббота', '11.30-13.30'],
   ["/fantazeri.jpg", 6, 'Фантазёры (8-9 лет)', 'Суббота', '16.30-18.30'],
@@ -82,14 +82,15 @@ const randomCheerfulColor = () => {
 <template>
   <div>
     <section class="text-gray-600 body-font lg:mb-20 -mt-10 sm:-mt-0">
-      <div class="container px-5 py-12 mx-auto flex flex-wrap flex-col">
+      <div class="container px-5 py-12 mb-32 sm:mb-0 mx-auto flex flex-wrap flex-col">
 `
         <div class="flex flex-wrap w-full mb-10 flex-col items-center text-center">
           <h1 ref="eltitle" :class="{'typewriter': isVisibletitle}" class="sm:text-3xl text-2xl font-medium title-font mb-2 text-blue-500 italic">Наши группы...</h1>
         </div>
 
         <div class="flex flex-wrap flex-col mx-auto w-full justify-center sm:justify-start space-y-4">
-          <div class="-mb-44 sm:mb-0 flex flex-col space-y-10 sm:space-y-0 md:grid md:grid-cols-4 md:gap-4">
+
+          <div class="-mb-44 sm:mb-0 grid grid-cols-2 grid-rows-4 sm:grid-cols-4 sm:grid-rows-2 gap-4">
             
             <GroupCard v-for="data in groups" :key="data" :image="data[0]" :group="data[1]" :name="data[2]" @handleClick="(n) => group = n" @click="isOpen = true" />
 
