@@ -1,4 +1,8 @@
 <script setup>
+const props = defineProps ({
+  stacked: Boolean
+})
+
 const el = ref(null)
 const isVisible = useElementVisibility(el)
 </script>
@@ -23,9 +27,56 @@ const isVisible = useElementVisibility(el)
 
 <template>
   <div>
-    <div ref="el" class="flex justify-center px-5 py-12">
-      <NuxtLink to="/lesson" :class="{ 'flash-bg-indigo': isVisible }" class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Записаться на бесплатное занятие</NuxtLink>
-      <a href="https://wa.me/905388895268" :class="{ 'flash-bg-green': isVisible }" class="ml-4 inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">Задать вопросы по Whatsapp</a>
+    <div
+      ref="el"
+      :class="{
+        'flex-col space-y-4' : props.stacked,
+        'flex-row' : !props.stacked,
+        'flex justify-center px-5 py-12' : true,
+      }"
+      class="flex px-5 py-6"
+    >
+      <NuxtLink 
+          to="/lesson" 
+          :class="{
+            'flash-bg-indigo': isVisible, 
+            'w-full': props.stacked, 
+            'w-1/2': !props.stacked,
+            'inline-flex' : !props.stacked,
+            'text-center': true,
+            'text-white': true,
+            'bg-indigo-500': true,
+            'border-0': true,
+            'py-2': true,
+            'px-6': true,
+            'focus:outline-none': true,
+            'hover:bg-indigo-600': true,
+            'rounded': true
+          }">
+        Записаться на бесплатное занятие
+      </NuxtLink>
+
+      <a 
+        href="https://wa.me/905388895268" 
+        :class="{
+            'flash-bg-green': isVisible, 
+            'w-full': props.stacked, 
+            'w-1/2': !props.stacked,
+            'inline-flex' : !props.stacked,
+            'ml-4' : !props.stacked,
+            'text-center': true,
+            'text-white': true,
+            'bg-green-500': true,
+            'border-0': true,
+            'py-2': true,
+            'px-6': true,
+            'focus:outline-none': true,
+            'hover:bg-green-600': true,
+            'rounded': true
+          }">
+        Задать вопросы по Whatsapp
+      </a>
+  
     </div>
-  </div>
+</div>
 </template>

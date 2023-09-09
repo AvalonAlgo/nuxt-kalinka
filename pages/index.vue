@@ -14,7 +14,7 @@ mode.value = 'light'
     <BlogHappyToHelp :elements="['У Вашего ребенка есть недостаток общения на русском языке', 'Ваш ребенок понимает, но не всегда отвечает на русском языке', 'Он не мотивирован изучать русский язык']" />
     <!-- <LessonWhatsapp /> -->
     <OurGroups />
-    <!-- <LessonWhatsapp class="mt-32 sm:-mt-10" /> -->
+    <LessonWhatsapp :stacked="true" class="mt-40 sm:-mt-10 sm:w-1/2 mx-auto" />
     <!-- <Team /> -->
     <Contact />
     <!-- <Footer /> -->

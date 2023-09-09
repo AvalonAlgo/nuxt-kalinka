@@ -56,6 +56,17 @@ const randomCheerfulColor = () => {
   // cheerfulColors.splice(randomIndex, 1);
   return chosenColor;
 };
+
+const iconNumbers = [1, 2, 3, 7, 8, 9, 10, 13, 14, 16];
+const basePath = "/icons/Untitled-";
+
+const icons = iconNumbers.map(num => `${basePath}${num}.png`);
+
+// Function to get a random icon
+const getRandomIcon = () => {
+  const randomIndex = Math.floor(Math.random() * icons.length);
+  return icons[randomIndex];
+};
 </script>
 
 <style scoped>
@@ -129,6 +140,10 @@ const randomCheerfulColor = () => {
                   Ваш малыш еще не ходит в садик, но Вы хотите, чтобы он развивался и узнавал новое в коллективе, учился взаимодействовать со сверстниками
                 </li>
 
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
+                </li>
+
                 <li class="border rounded-lg p-2 flex flex-row">
                   <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
                     <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
@@ -137,6 +152,10 @@ const randomCheerfulColor = () => {
                     </svg>
                   </div>
                   Вам сложно  организовать игровые занятия дома, не хватает времени
+                </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
                 </li>
 
                 <li class="border rounded-lg p-2 flex flex-row">
@@ -149,6 +168,10 @@ const randomCheerfulColor = () => {
                   Вы хотите найти друзей Вашему малышу, с которыми бы он общался на русском языке
                 </li>
 
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
+                </li>
+
                 <li class="border rounded-lg p-2 flex flex-row">
                   <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
                     <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
@@ -157,6 +180,10 @@ const randomCheerfulColor = () => {
                     </svg>
                     </div>
                     Вы хотите разговорить ребенка, но самостоятельно не получается
+                </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
                 </li>
 
                 <li class="border rounded-lg p-2 flex flex-row">
@@ -168,6 +195,8 @@ const randomCheerfulColor = () => {
                   </div>
                   Вы хотите , чтобы ребенок участвовал в утренниках как в Вашем детстве
                 </li>
+
+                <LessonWhatsapp :stacked="true" class="-mb-32" />
 
               </ul>
 
@@ -207,6 +236,10 @@ const randomCheerfulColor = () => {
                   Ваш малыш еще не ходит в садик, но Вы хотите, чтобы он развивался и узнавал новое в коллективе, учился взаимодействовать со сверстниками
                 </li>
 
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
+                </li>
+
                 <li class="border rounded-lg p-2 flex flex-row">
                   <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
                     <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
@@ -215,6 +248,10 @@ const randomCheerfulColor = () => {
                     </svg>
                   </div>
                   Вам сложно  организовать игровые занятия дома, не хватает времени
+                </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
                 </li>
 
                 <li class="border rounded-lg p-2 flex flex-row">
@@ -227,6 +264,10 @@ const randomCheerfulColor = () => {
                   Вы хотите найти друзей Вашему малышу, с которыми бы он общался на русском языке
                 </li>
 
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
+                </li>
+
                 <li class="border rounded-lg p-2 flex flex-row">
                   <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
                     <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
@@ -235,6 +276,10 @@ const randomCheerfulColor = () => {
                     </svg>
                     </div>
                     Вы хотите разговорить ребенка, но самостоятельно не получается
+                </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
                 </li>
 
                 <li class="border rounded-lg p-2 flex flex-row">
@@ -246,6 +291,8 @@ const randomCheerfulColor = () => {
                   </div>
                   Вы хотите , чтобы ребенок участвовал в утренниках как в Вашем детстве
                 </li>
+
+                <LessonWhatsapp :stacked="true" class="-mb-32" />
 
               </ul>
 
@@ -284,7 +331,11 @@ const randomCheerfulColor = () => {
                     </div>
                     У Вас не хватает сил и времени на организацию домашнего образовательного процесса
                 </li>
-            
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
+                </li>
+
                 <li class="border rounded-lg p-2 flex flex-row">
                     <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
@@ -293,6 +344,10 @@ const randomCheerfulColor = () => {
                         </svg>
                     </div>
                     Вы хотите укрепить мотивацию ребенка изучать русский язык
+                </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
                 </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
@@ -304,6 +359,10 @@ const randomCheerfulColor = () => {
                     </div>
                     Вам важно, чтобы занятия были интересны самому ребенку и чтобы Вы видели результаты
                 </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
+                </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
                     <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
@@ -313,6 +372,10 @@ const randomCheerfulColor = () => {
                         </svg>
                     </div>
                     Вы не можете найти курсы русского языка, чтобы Ваш ребенок учился с ровесниками
+                </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
                 </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
@@ -324,6 +387,10 @@ const randomCheerfulColor = () => {
                     </div>
                     Вы хотите, чтобы Ваш ребенок не сильно отставал от своих ровесников в странах СНГ и в случае переезда смог быстро наверстать программу русского языка общеобразовательной школы
                 </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
+                </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
                     <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
@@ -333,6 +400,10 @@ const randomCheerfulColor = () => {
                         </svg>
                     </div>
                     Вам важно, чтобы помимо русского языка ребенок изучал Литературу, Окружающий Мир, Историю и обогатил родную речь
+                </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
                 </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
@@ -344,6 +415,8 @@ const randomCheerfulColor = () => {
                     </div>
                     Вы хотите найти русскоязычную среду для Вашего ребенка и себя, т.к. вам сложно адаптироваться после недавнего переезда в Турцию
                 </li>
+
+                <LessonWhatsapp :stacked="true" class="-mb-32" />
             
               </ul>
 
@@ -382,7 +455,11 @@ const randomCheerfulColor = () => {
                     </div>
                     У Вас не хватает сил и времени на организацию домашнего образовательного процесса
                 </li>
-            
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
+                </li>
+
                 <li class="border rounded-lg p-2 flex flex-row">
                     <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
@@ -391,6 +468,10 @@ const randomCheerfulColor = () => {
                         </svg>
                     </div>
                     Вы хотите укрепить мотивацию ребенка изучать русский язык
+                </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
                 </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
@@ -402,6 +483,10 @@ const randomCheerfulColor = () => {
                     </div>
                     Вам важно, чтобы занятия были интересны самому ребенку и чтобы Вы видели результаты
                 </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
+                </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
                     <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
@@ -411,6 +496,10 @@ const randomCheerfulColor = () => {
                         </svg>
                     </div>
                     Вы не можете найти курсы русского языка, чтобы Ваш ребенок учился с ровесниками
+                </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
                 </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
@@ -422,6 +511,10 @@ const randomCheerfulColor = () => {
                     </div>
                     Вы хотите, чтобы Ваш ребенок не сильно отставал от своих ровесников в странах СНГ и в случае переезда смог быстро наверстать программу русского языка общеобразовательной школы
                 </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
+                </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
                     <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
@@ -431,6 +524,10 @@ const randomCheerfulColor = () => {
                         </svg>
                     </div>
                     Вам важно, чтобы помимо русского языка ребенок изучал Литературу, Окружающий Мир, Историю и обогатил родную речь
+                </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
                 </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
@@ -442,6 +539,8 @@ const randomCheerfulColor = () => {
                     </div>
                     Вы хотите найти русскоязычную среду для Вашего ребенка и себя, т.к. вам сложно адаптироваться после недавнего переезда в Турцию
                 </li>
+
+                <LessonWhatsapp :stacked="true" class="-mb-32" />
             
               </ul>
 
@@ -480,7 +579,11 @@ const randomCheerfulColor = () => {
                     </div>
                     У Вас не хватает сил и времени на организацию домашнего образовательного процесса
                 </li>
-            
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
+                </li>
+
                 <li class="border rounded-lg p-2 flex flex-row">
                     <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
@@ -489,6 +592,10 @@ const randomCheerfulColor = () => {
                         </svg>
                     </div>
                     Вы хотите укрепить мотивацию ребенка изучать русский язык
+                </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
                 </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
@@ -500,6 +607,10 @@ const randomCheerfulColor = () => {
                     </div>
                     Вам важно, чтобы занятия были интересны самому ребенку и чтобы Вы видели результаты
                 </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
+                </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
                     <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
@@ -509,6 +620,10 @@ const randomCheerfulColor = () => {
                         </svg>
                     </div>
                     Вы не можете найти курсы русского языка, чтобы Ваш ребенок учился с ровесниками
+                </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
                 </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
@@ -520,6 +635,10 @@ const randomCheerfulColor = () => {
                     </div>
                     Вы хотите, чтобы Ваш ребенок не сильно отставал от своих ровесников в странах СНГ и в случае переезда смог быстро наверстать программу русского языка общеобразовательной школы
                 </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
+                </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
                     <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
@@ -529,6 +648,10 @@ const randomCheerfulColor = () => {
                         </svg>
                     </div>
                     Вам важно, чтобы помимо русского языка ребенок изучал Литературу, Окружающий Мир, Историю и обогатил родную речь
+                </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
                 </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
@@ -540,6 +663,8 @@ const randomCheerfulColor = () => {
                     </div>
                     Вы хотите найти русскоязычную среду для Вашего ребенка и себя, т.к. вам сложно адаптироваться после недавнего переезда в Турцию
                 </li>
+
+                <LessonWhatsapp :stacked="true" class="-mb-32" />
             
               </ul>
 
@@ -578,7 +703,11 @@ const randomCheerfulColor = () => {
                     </div>
                     У Вас не хватает сил и времени на организацию домашнего образовательного процесса
                 </li>
-            
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
+                </li>
+
                 <li class="border rounded-lg p-2 flex flex-row">
                     <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
@@ -587,6 +716,10 @@ const randomCheerfulColor = () => {
                         </svg>
                     </div>
                     Вы хотите укрепить мотивацию ребенка изучать русский язык
+                </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
                 </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
@@ -598,6 +731,10 @@ const randomCheerfulColor = () => {
                     </div>
                     Вам важно, чтобы занятия были интересны самому ребенку и чтобы Вы видели результаты
                 </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
+                </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
                     <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
@@ -607,6 +744,10 @@ const randomCheerfulColor = () => {
                         </svg>
                     </div>
                     Вы не можете найти курсы русского языка, чтобы Ваш ребенок учился с ровесниками
+                </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
                 </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
@@ -618,6 +759,10 @@ const randomCheerfulColor = () => {
                     </div>
                     Вы хотите, чтобы Ваш ребенок не сильно отставал от своих ровесников в странах СНГ и в случае переезда смог быстро наверстать программу русского языка общеобразовательной школы
                 </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
+                </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
                     <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
@@ -627,6 +772,10 @@ const randomCheerfulColor = () => {
                         </svg>
                     </div>
                     Вам важно, чтобы помимо русского языка ребенок изучал Литературу, Окружающий Мир, Историю и обогатил родную речь
+                </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
                 </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
@@ -638,6 +787,8 @@ const randomCheerfulColor = () => {
                     </div>
                     Вы хотите найти русскоязычную среду для Вашего ребенка и себя, т.к. вам сложно адаптироваться после недавнего переезда в Турцию
                 </li>
+
+                <LessonWhatsapp :stacked="true" class="-mb-32" />
             
               </ul>
 
@@ -676,7 +827,11 @@ const randomCheerfulColor = () => {
                     </div>
                     У Вас не хватает сил и времени на организацию домашнего образовательного процесса
                 </li>
-            
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
+                </li>
+
                 <li class="border rounded-lg p-2 flex flex-row">
                     <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
@@ -685,6 +840,10 @@ const randomCheerfulColor = () => {
                         </svg>
                     </div>
                     Вы хотите укрепить мотивацию ребенка изучать русский язык
+                </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
                 </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
@@ -696,6 +855,10 @@ const randomCheerfulColor = () => {
                     </div>
                     Вам важно, чтобы занятия были интересны самому ребенку и чтобы Вы видели результаты
                 </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
+                </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
                     <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
@@ -705,6 +868,10 @@ const randomCheerfulColor = () => {
                         </svg>
                     </div>
                     Вы не можете найти курсы русского языка, чтобы Ваш ребенок учился с ровесниками
+                </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
                 </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
@@ -716,6 +883,10 @@ const randomCheerfulColor = () => {
                     </div>
                     Вы хотите, чтобы Ваш ребенок не сильно отставал от своих ровесников в странах СНГ и в случае переезда смог быстро наверстать программу русского языка общеобразовательной школы
                 </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
+                </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
                     <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
@@ -725,6 +896,10 @@ const randomCheerfulColor = () => {
                         </svg>
                     </div>
                     Вам важно, чтобы помимо русского языка ребенок изучал Литературу, Окружающий Мир, Историю и обогатил родную речь
+                </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
                 </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
@@ -736,6 +911,8 @@ const randomCheerfulColor = () => {
                     </div>
                     Вы хотите найти русскоязычную среду для Вашего ребенка и себя, т.к. вам сложно адаптироваться после недавнего переезда в Турцию
                 </li>
+
+                <LessonWhatsapp :stacked="true" class="-mb-32" />
             
               </ul>
 
@@ -774,7 +951,11 @@ const randomCheerfulColor = () => {
                     </div>
                     У Вас не хватает сил и времени на организацию домашнего образовательного процесса
                 </li>
-            
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
+                </li>
+
                 <li class="border rounded-lg p-2 flex flex-row">
                     <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
@@ -783,6 +964,10 @@ const randomCheerfulColor = () => {
                         </svg>
                     </div>
                     Вы хотите укрепить мотивацию ребенка изучать русский язык
+                </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
                 </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
@@ -794,6 +979,10 @@ const randomCheerfulColor = () => {
                     </div>
                     Вам важно, чтобы занятия были интересны самому ребенку и чтобы Вы видели результаты
                 </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
+                </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
                     <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
@@ -803,6 +992,10 @@ const randomCheerfulColor = () => {
                         </svg>
                     </div>
                     Вы не можете найти курсы русского языка, чтобы Ваш ребенок учился с ровесниками
+                </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
                 </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
@@ -814,6 +1007,10 @@ const randomCheerfulColor = () => {
                     </div>
                     Вы хотите, чтобы Ваш ребенок не сильно отставал от своих ровесников в странах СНГ и в случае переезда смог быстро наверстать программу русского языка общеобразовательной школы
                 </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
+                </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
                     <div :style="{backgroundColor: randomCheerfulColor()}" class="mx-2 my-auto flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10">
@@ -823,6 +1020,10 @@ const randomCheerfulColor = () => {
                         </svg>
                     </div>
                     Вам важно, чтобы помимо русского языка ребенок изучал Литературу, Окружающий Мир, Историю и обогатил родную речь
+                </li>
+
+                <li class="border rounded-full p-2 h-1/4 w-1/4 mx-auto">
+                  <NuxtImg :src="getRandomIcon()" />
                 </li>
             
                 <li class="border rounded-lg p-2 flex flex-row">
@@ -834,6 +1035,8 @@ const randomCheerfulColor = () => {
                     </div>
                     Вы хотите найти русскоязычную среду для Вашего ребенка и себя, т.к. вам сложно адаптироваться после недавнего переезда в Турцию
                 </li>
+
+                <LessonWhatsapp :stacked="true" class="-mb-32" />
             
               </ul>
 
