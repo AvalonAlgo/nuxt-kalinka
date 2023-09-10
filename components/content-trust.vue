@@ -87,6 +87,7 @@ const getRandomIcon = () => {
             <NuxtImg v-if="index === 0" src="/icons/owl.png" class="w-16 h-16 mx-auto mt-4" />
             <NuxtImg v-if="index === 1" src="/icons/booksnapple.png" class="w-16 h-16 mx-auto mt-4" />
             <NuxtImg v-if="index === 2" src="/icons/bag.png" class="w-16 h-16 mx-auto mt-4" />
+            <NuxtImg v-if="index === 3" src="/icons/tree.png" class="rounded-full w-16 h-16 mx-auto mt-4 transform scale-x-[-1]" />
             <NuxtImg v-if="index === 4" src="/icons/friends.png" class="w-16 h-16 mx-auto mt-4" />
 
           </div>

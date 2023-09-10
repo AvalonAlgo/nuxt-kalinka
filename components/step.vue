@@ -113,13 +113,13 @@ const shouldShowLargeCarousel = computed(() => {
 
         </div>
 
-        <el-carousel v-show="shouldShowSmallCarousel" indicator-position="none" :interval="4000" height="270px" class="w-full h-full mt-20">
+        <el-carousel v-show="shouldShowSmallCarousel" indicator-position="none" :interval="2000" height="270px" class="w-full h-full mt-20">
           <el-carousel-item v-for="item in images" :key="item" class="w-full h-full">
             <NuxtImg :src="item" class="h-full w-full rounded-lg" alt="" />
           </el-carousel-item>
         </el-carousel>
 
-        <el-carousel v-show="shouldShowLargeCarousel" indicator-position="none" :interval="4000" type="card" height="500px" class="w-full h-full mt-20">
+        <el-carousel v-show="shouldShowLargeCarousel" indicator-position="none" :interval="2000" type="card" height="500px" class="w-full h-full mt-20">
           <el-carousel-item v-for="item in images" :key="item" class="w-full h-full">
             <NuxtImg :src="item" class="h-full w-full rounded-lg" alt="" />
           </el-carousel-item>

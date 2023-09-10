@@ -52,7 +52,7 @@ const isVisible = useElementVisibility(el)
             'px-6': true,
             'focus:outline-none': true,
             'hover:bg-orange-600': true,
-            'rounded': true
+            'rounded-xl': true
           }">
         Записаться на
         <br /> бесплатное занятие
@@ -75,7 +75,7 @@ const isVisible = useElementVisibility(el)
             'px-6': true,
             'focus:outline-none': true,
             'hover:bg-green-600': true,
-            'rounded': true
+            'rounded-xl': true
           }">
         Задать вопросы
         <br /> по Whatsapp

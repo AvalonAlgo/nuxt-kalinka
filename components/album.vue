@@ -18,10 +18,7 @@ watchEffect(() => {
   typeWriter();
 });
 
-const images = [
-
-];
-
+const images = [];
 for (let i = 1; i <= 31; i++) {
   images.push(`/album/${i}.jpg`);
 }
@@ -58,6 +55,14 @@ const shouldShowSmallCarousel = computed(() => {
 const shouldShowLargeCarousel = computed(() => {
   return screenSize.value === 'md' || screenSize.value === 'lg' || screenSize.value === 'xl';
 })
+
+const imageRef = ref('/andrey.jpg');
+const isOpen = ref(false);
+
+function openModal(url) {
+  imageRef = url;
+  isOpenModal = true;
+}
 </script>
 
 <style scoped>
@@ -84,25 +89,34 @@ const shouldShowLargeCarousel = computed(() => {
 <template>
   <div>
     <section class="text-gray-600 body-font lg:mb-20 sm:-mt-32">
-      <div class="container px-5 mb-32 sm:mb-0 mx-auto flex flex-wrap flex-col">
+      <div class="container mb-32 sm:mb-0 mx-auto flex flex-wrap flex-col">
 
         <div class="flex flex-wrap w-full flex-col items-center text-center ">
           <h1 ref="eltitle" :class="{'typewriter': isVisibletitle}" class="sm:text-3xl text-2xl font-medium title-font -mt-10 my-10 sm:-mt-26 sm:my-0 text-blue-500 italic">Наш фотоальбом...</h1>
         </div>
 
-        <el-carousel v-show="shouldShowSmallCarousel" indicator-position="none" :interval="4000" height="270px" class="w-full h-full sm:my-20">
-          <el-carousel-item v-for="item in images" :key="item" class="w-full">
-            <NuxtImg :src="item" class="w-full rounded-lg" alt="" />
+        <el-carousel v-show="shouldShowSmallCarousel" indicator-position="none" :interval="2000" type="card" height="200px" class="w-full h-full mt-4 -mb-20">
+          <el-carousel-item v-for="item in images" :key="item" class="w-full h-full">
+            <NuxtImg @click="isOpen = true" :src="item" class="w-full rounded-lg" alt="" />
           </el-carousel-item>
         </el-carousel>
 
-        <el-carousel v-show="shouldShowLargeCarousel" indicator-position="none" :interval="4000" type="card" height="500px" class="w-full h-full sm:my-20">
-          <el-carousel-item v-for="item in images" :key="item" class="w-full">
-            <NuxtImg :src="item" class="w-full rounded-lg" alt="" />
+        <el-carousel v-show="shouldShowLargeCarousel" indicator-position="none" :interval="2000" type="card" height="500px" class="w-full h-full mt-20">
+          <el-carousel-item v-for="item in images" :key="item" class="w-full h-full">
+            <NuxtImg @click="isOpen = true" :src="item" class="h-full w-full rounded-lg" alt="" />
           </el-carousel-item>
         </el-carousel>
 
       </div>
     </section>
+
+    <UModal v-model="isOpen">
+      <UCard :ui="{ divide: 'divide-y divide-gray-100', background: 'bg-white'}">
+
+        <NuxtImg src="/andrey.jpg" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
+
+      </UCard>
+    </UModal>
+
   </div>
 </template>
