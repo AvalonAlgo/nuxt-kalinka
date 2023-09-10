@@ -8,7 +8,7 @@ const isVisible = useElementVisibility(el)
 </script>
 
 <style scoped>
-@keyframes flashWhiteIndigo {
+@keyframes flashWhiteOrange {
   50% { background-color: white; }
 }
 
@@ -16,8 +16,8 @@ const isVisible = useElementVisibility(el)
   50% { background-color: white; }
 }
 
-.flash-bg-indigo {
-  animation: flashWhiteIndigo 1s;
+.flash-bg-orange {
+  animation: flashWhiteOrange 1s;
 }
 
 .flash-bg-green {
@@ -39,24 +39,26 @@ const isVisible = useElementVisibility(el)
       <NuxtLink 
           to="/lesson" 
           :class="{
-            'flash-bg-indigo': isVisible, 
+            'flash-bg-orange': isVisible, 
             'w-full': props.stacked, 
             'w-1/2': !props.stacked,
             'inline-flex' : !props.stacked,
-            'text-center': true,
+            'text-center font-semibold': true,
+            'justify-center': true,
             'text-white': true,
-            'bg-indigo-500': true,
+            'bg-orange-500': true,
             'border-0': true,
             'py-2': true,
             'px-6': true,
             'focus:outline-none': true,
-            'hover:bg-indigo-600': true,
+            'hover:bg-orange-600': true,
             'rounded': true
           }">
-        Записаться на бесплатное занятие
+        Записаться на
+        <br /> бесплатное занятие
       </NuxtLink>
 
-      <a 
+      <a
         href="https://wa.me/905388895268" 
         :class="{
             'flash-bg-green': isVisible, 
@@ -64,7 +66,8 @@ const isVisible = useElementVisibility(el)
             'w-1/2': !props.stacked,
             'inline-flex' : !props.stacked,
             'ml-4' : !props.stacked,
-            'text-center': true,
+            'text-center font-semibold': true,
+            'justify-center': true,
             'text-white': true,
             'bg-green-500': true,
             'border-0': true,
@@ -74,7 +77,8 @@ const isVisible = useElementVisibility(el)
             'hover:bg-green-600': true,
             'rounded': true
           }">
-        Задать вопросы по Whatsapp
+        Задать вопросы
+        <br /> по Whatsapp
       </a>
   
     </div>

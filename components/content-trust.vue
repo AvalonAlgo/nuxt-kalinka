@@ -26,6 +26,26 @@ const typeWriter = () => {
 watchEffect(() => {
   typeWriter();
 });
+
+const iconNumbers = [1, 2, 3, 7, 8, 9, 10, 13, 14, 16];
+const basePath = "/icons/Untitled-";
+const icons = iconNumbers.map(num => `${basePath}${num}.png`);
+
+let unusedIcons = [...icons];  // Clone the icons array
+
+const getRandomIcon = () => {
+  if (unusedIcons.length === 0) {
+    unusedIcons = [...icons];  // Reset if all icons have been used
+  }
+
+  const randomIndex = Math.floor(Math.random() * unusedIcons.length);
+  const chosenIcon = unusedIcons[randomIndex];
+  
+  // Remove the chosen icon from the unusedIcons array
+  unusedIcons = unusedIcons.filter(icon => icon !== chosenIcon);
+  
+  return chosenIcon;
+};
 </script>
 
 <style scoped>
@@ -56,17 +76,20 @@ watchEffect(() => {
         <div class="flex flex-wrap w-full mb-10 flex-col items-center text-center">
           <h1 ref="eltitle" :class="{'typewriter': isVisibletitle}" class="sm:text-3xl text-2xl font-medium title-font mb-2 text-blue-500 italic">{{ animatedText }}</h1>
         </div>
-        <div class="flex flex-wrap -m-4">
 
-          <div ref="el" v-for="e in props.elements" :key="e" class="xl:w-1/3 md:w-1/2 sm:w-full p-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div v-for="e in props.elements" :key="e" class="flex flex-col items-center">
             
-            <div class="border border-gray-200 p-6 rounded-lg h-full">
-              <p class="leading-relaxed text-lg">{{ e }}</p>
+            <div class="border border-gray-200 p-6 rounded-lg flex-grow">
+              <p class="text-lg text-center">{{ e }}</p>
             </div>
-            
+        
+            <NuxtImg :src="getRandomIcon()" class="w-32 h-32 mx-auto mt-4" />
+        
           </div>
-
         </div>
+        
+        
       </div>
     </section>
   </div>

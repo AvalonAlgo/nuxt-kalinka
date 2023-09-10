@@ -4,8 +4,6 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxthq/ui',
-    '@nuxtjs/supabase',
-    '@tresjs/nuxt',
     '@vueuse/nuxt',
     '@nuxt/image',
     'vue-email/nuxt',
@@ -14,9 +12,6 @@ export default defineNuxtConfig({
     '@element-plus/nuxt',
     '@nuxtjs/google-fonts'
   ],
-  supabase: {
-    redirect: false
-  },
   googleFonts: {
     families: {
       'Amatic+SC': true
