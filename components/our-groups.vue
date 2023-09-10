@@ -109,7 +109,7 @@ const randomCheerfulColor = () => {
         <div class="flex flex-wrap flex-col mx-auto w-full justify-center sm:justify-start space-y-4">
 
           <div class="-mb-48 sm:mb-0 grid grid-cols-2 grid-rows-4 sm:grid-cols-4 sm:grid-rows-2 gap-4">
-            <GroupCard v-for="data in groups" :key="data" :image="data[0]" :group="data[1]" :name="data[2]" @handleClick="(n) => groupRef = n" @click="isOpen = true" />
+            <GroupCard v-for="(data, index) in groups" :key="data" :index="index" :image="data[0]" :group="data[1]" :name="data[2]" @handleClick="(n) => groupRef = n" @click="isOpen = true" />
           </div>
 
           <div v-for="group in groups" :key="group">

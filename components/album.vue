@@ -92,7 +92,7 @@ const isOpen = ref(false);
       <div class="container mb-32 sm:mb-0 mx-auto flex flex-wrap flex-col">
 
         <div class="flex flex-wrap w-full flex-col items-center text-center ">
-          <h1 ref="eltitle" :class="{'typewriter': isVisibletitle}" class="sm:text-3xl text-2xl font-medium title-font -mt-12 my-10 sm:-mt-26 sm:my-0 text-blue-500 italic">Наш фотоальбом...</h1>
+          <h1 ref="eltitle" :class="{'typewriter': isVisibletitle}" class="sm:text-3xl text-2xl font-medium title-font -mt-20 my-10 sm:-mt-26 sm:my-0 text-blue-500 italic">Наш фотоальбом...</h1>
         </div>
 
         <el-carousel v-show="shouldShowSmallCarousel" indicator-position="none" :interval="2000" type="card" height="200px" class="w-full h-full mt-4 -mb-20">
