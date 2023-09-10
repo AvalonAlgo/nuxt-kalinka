@@ -79,16 +79,17 @@ const getRandomIcon = () => {
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div v-for="(e, index) in props.elements" :key="e" class="flex flex-col items-center">
-            
+
+            <NuxtImg v-if="index === 0" src="/icons/owl.png" class="w-16 h-16 mx-auto mb-4" />
+            <NuxtImg v-if="index === 1" src="/icons/booksnapple.png" class="w-16 h-16 mx-auto mb-4" />
+            <NuxtImg v-if="index === 2" src="/icons/bag.png" class="w-16 h-16 mx-auto mb-4" />
+            <NuxtImg v-if="index === 3" src="/icons/friends.png" class="w-16 h-16 mx-auto mb-4" />
+            <NuxtImg v-if="index === 4" src="/icons/tree.png" class="rounded-full w-16 h-16 mx-auto mb-4 transform scale-x-[-1]" />
+            <NuxtImg v-if="index === 5" src="/icons/cup.png" class="rounded-full w-16 h-16 mx-auto mb-4 transform scale-x-[-1]" />
+
             <div class="border border-gray-200 p-6 rounded-lg flex-grow w-full">
               <p class="text-lg text-center">{{ e }}</p>
             </div>
-        
-            <NuxtImg v-if="index === 0" src="/icons/owl.png" class="w-16 h-16 mx-auto mt-4" />
-            <NuxtImg v-if="index === 1" src="/icons/booksnapple.png" class="w-16 h-16 mx-auto mt-4" />
-            <NuxtImg v-if="index === 2" src="/icons/bag.png" class="w-16 h-16 mx-auto mt-4" />
-            <NuxtImg v-if="index === 3" src="/icons/tree.png" class="rounded-full w-16 h-16 mx-auto mt-4 transform scale-x-[-1]" />
-            <NuxtImg v-if="index === 4" src="/icons/friends.png" class="w-16 h-16 mx-auto mt-4" />
 
           </div>
         </div>

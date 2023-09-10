@@ -56,13 +56,13 @@ const shouldShowLargeCarousel = computed(() => {
   return screenSize.value === 'md' || screenSize.value === 'lg' || screenSize.value === 'xl';
 })
 
-const imageRef = ref('/andrey.jpg');
+const imageRef = ref('');
 const isOpen = ref(false);
 
-function openModal(url) {
-  imageRef = url;
-  isOpenModal = true;
-}
+// function openModal(url) {
+//   imageRef = url;
+//   isOpenModal = true;
+// }
 </script>
 
 <style scoped>
@@ -97,13 +97,13 @@ function openModal(url) {
 
         <el-carousel v-show="shouldShowSmallCarousel" indicator-position="none" :interval="2000" type="card" height="200px" class="w-full h-full mt-4 -mb-20">
           <el-carousel-item v-for="item in images" :key="item" class="w-full h-full">
-            <NuxtImg @click="isOpen = true" :src="item" class="w-full rounded-lg" alt="" />
+            <NuxtImg @click="imageRef = item" :src="item" class="w-full rounded-lg" alt="" />
           </el-carousel-item>
         </el-carousel>
 
         <el-carousel v-show="shouldShowLargeCarousel" indicator-position="none" :interval="2000" type="card" height="500px" class="w-full h-full mt-20">
           <el-carousel-item v-for="item in images" :key="item" class="w-full h-full">
-            <NuxtImg @click="isOpen = true" :src="item" class="h-full w-full rounded-lg" alt="" />
+            <NuxtImg @click="imageRef = item " :src="item" class="h-full w-full rounded-lg" alt="" />
           </el-carousel-item>
         </el-carousel>
 
@@ -113,7 +113,7 @@ function openModal(url) {
     <UModal v-model="isOpen">
       <UCard :ui="{ divide: 'divide-y divide-gray-100', background: 'bg-white'}">
 
-        <NuxtImg src="/andrey.jpg" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
+        <NuxtImg :src="imageRef" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
 
       </UCard>
     </UModal>
