@@ -10,7 +10,7 @@
     <!-- <LessonWhatsapp :stacked="true" class="sm:w-1/2 mx-auto" /> -->
     <OurGroups id="groups" />
     <Album id="album" />
-    <LessonWhatsapp :stacked="true" class="-mt-24 sm:-mt-32 sm:w-1/2 mx-auto" />
+    <LessonWhatsapp :stacked="true" class="-mt-16 sm:my-10 sm:-mt-10 sm:w-1/2 mx-auto" />
     <!-- <Team /> -->
     <Contact id="contact" />
     <!-- <Footer /> -->

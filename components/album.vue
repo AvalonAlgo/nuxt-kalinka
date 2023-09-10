@@ -83,20 +83,20 @@ const shouldShowLargeCarousel = computed(() => {
 
 <template>
   <div>
-    <section class="text-gray-600 body-font lg:mb-20 -mt-10 sm:-mt-0">
+    <section class="text-gray-600 body-font lg:mb-20 sm:-mt-32">
       <div class="container px-5 mb-32 sm:mb-0 mx-auto flex flex-wrap flex-col">
 
         <div class="flex flex-wrap w-full flex-col items-center text-center ">
-          <h1 ref="eltitle" :class="{'typewriter': isVisibletitle}" class="sm:text-3xl text-2xl font-medium title-font -mb-10 text-blue-500 italic">Наш фотоальбом...</h1>
+          <h1 ref="eltitle" :class="{'typewriter': isVisibletitle}" class="sm:text-3xl text-2xl font-medium title-font -mt-10 my-10 sm:-mt-26 sm:my-0 text-blue-500 italic">Наш фотоальбом...</h1>
         </div>
 
-        <el-carousel v-show="shouldShowSmallCarousel" indicator-position="none" :interval="4000" height="270px" class="w-full h-full mt-20">
+        <el-carousel v-show="shouldShowSmallCarousel" indicator-position="none" :interval="4000" height="270px" class="w-full h-full sm:my-20">
           <el-carousel-item v-for="item in images" :key="item" class="w-full">
             <NuxtImg :src="item" class="w-full rounded-lg" alt="" />
           </el-carousel-item>
         </el-carousel>
 
-        <el-carousel v-show="shouldShowLargeCarousel" indicator-position="none" :interval="4000" type="card" height="500px" class="w-full h-full mt-20">
+        <el-carousel v-show="shouldShowLargeCarousel" indicator-position="none" :interval="4000" type="card" height="500px" class="w-full h-full sm:my-20">
           <el-carousel-item v-for="item in images" :key="item" class="w-full">
             <NuxtImg :src="item" class="w-full rounded-lg" alt="" />
           </el-carousel-item>
