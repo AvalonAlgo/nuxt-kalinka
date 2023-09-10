@@ -92,18 +92,18 @@ const isOpen = ref(false);
       <div class="container mb-32 sm:mb-0 mx-auto flex flex-wrap flex-col">
 
         <div class="flex flex-wrap w-full flex-col items-center text-center ">
-          <h1 ref="eltitle" :class="{'typewriter': isVisibletitle}" class="sm:text-3xl text-2xl font-medium title-font -mt-10 my-10 sm:-mt-26 sm:my-0 text-blue-500 italic">Наш фотоальбом...</h1>
+          <h1 ref="eltitle" :class="{'typewriter': isVisibletitle}" class="sm:text-3xl text-2xl font-medium title-font -mt-12 my-10 sm:-mt-26 sm:my-0 text-blue-500 italic">Наш фотоальбом...</h1>
         </div>
 
         <el-carousel v-show="shouldShowSmallCarousel" indicator-position="none" :interval="2000" type="card" height="200px" class="w-full h-full mt-4 -mb-20">
           <el-carousel-item v-for="item in images" :key="item" class="w-full h-full">
-            <NuxtImg @click="imageRef = item" :src="item" class="w-full rounded-lg" alt="" />
+            <NuxtImg @click="imageRef = item" @:click="isOpen = true" :src="item" class="w-full rounded-lg" alt="" />
           </el-carousel-item>
         </el-carousel>
 
         <el-carousel v-show="shouldShowLargeCarousel" indicator-position="none" :interval="2000" type="card" height="500px" class="w-full h-full mt-20">
           <el-carousel-item v-for="item in images" :key="item" class="w-full h-full">
-            <NuxtImg @click="imageRef = item " :src="item" class="h-full w-full rounded-lg" alt="" />
+            <NuxtImg @click="imageRef = item" @:click="isOpen = true" :src="item" class="h-full w-full rounded-lg" alt="" />
           </el-carousel-item>
         </el-carousel>
 
@@ -113,7 +113,14 @@ const isOpen = ref(false);
     <UModal v-model="isOpen">
       <UCard :ui="{ divide: 'divide-y divide-gray-100', background: 'bg-white'}">
 
-        <NuxtImg :src="imageRef" class="rounded-lg mx-auto m-4 border border-gray-200 p-2" />
+        <template #header>
+          <div class="flex items-center justify-between">
+            <h1 class="text-xl font-bold">Фотография</h1>
+            <UButton color="dark" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1" @click="isOpen = false" />  
+          </div>
+        </template>
+        
+        <NuxtImg :src="imageRef" class="rounded-lg mx-auto m-4 border border-gray-200" />
 
       </UCard>
     </UModal>
