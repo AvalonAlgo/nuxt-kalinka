@@ -32,7 +32,7 @@ const isVisible = useElementVisibility(el)
       :class="{
         'flex-col space-y-4' : props.stacked,
         'flex-row' : !props.stacked,
-        'flex justify-center px-5 py-12' : true,
+        'flex items-center justify-center px-5 py-12' : true,
       }"
       class="flex px-5 py-6"
     >
@@ -40,7 +40,7 @@ const isVisible = useElementVisibility(el)
           to="/lesson" 
           :class="{
             'flash-bg-orange': isVisible, 
-            'w-full': props.stacked, 
+            'w-2/3': props.stacked, 
             'w-1/2': !props.stacked,
             'inline-flex' : !props.stacked,
             'text-center font-semibold': true,
@@ -62,7 +62,7 @@ const isVisible = useElementVisibility(el)
         href="https://wa.me/905388895268" 
         :class="{
             'flash-bg-green': isVisible, 
-            'w-full': props.stacked, 
+            'w-2/3': props.stacked, 
             'w-1/2': !props.stacked,
             'inline-flex' : !props.stacked,
             'ml-4' : !props.stacked,
