@@ -80,7 +80,7 @@ const getRandomIcon = () => {
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div v-for="e in props.elements" :key="e" class="flex flex-col items-center">
             
-            <div class="border border-gray-200 p-6 rounded-lg flex-grow">
+            <div class="border border-gray-200 p-6 rounded-lg flex-grow w-full">
               <p class="text-lg text-center">{{ e }}</p>
             </div>
         
