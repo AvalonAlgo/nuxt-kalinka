@@ -2,7 +2,7 @@
 import { useCompiler } from '#vue-email'
 import sendgrid from '@sendgrid/mail';
 
-sendgrid.setApiKey("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");
+sendgrid.setApiKey(process.env.SENDGRID_KEY);
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event);
