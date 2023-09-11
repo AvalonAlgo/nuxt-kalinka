@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
 
   const options = {
     from: 'AvalonAlgo@protonmail.com',
-    to: 'denizkeskin@gmail.com',
+    to: 'kalinka@kalinka.web.tr',
     subject: 'Калинка - Новый вопрос',
     html: template,
   };

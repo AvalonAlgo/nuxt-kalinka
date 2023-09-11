@@ -24,7 +24,7 @@ export default defineEventHandler(async (event) => {
 
   const options = {
     from: 'AvalonAlgo@protonmail.com',
-    to: 'kalinka@kalinka.com',
+    to: 'kalinka@kalinka.web.tr',
     subject: 'Калинка - Заявка на пробное занятие',
     html: template,
   };
