@@ -1,4 +1,6 @@
 <script setup>
+import confetti from 'canvas-confetti';
+
 const name = ref(null);
 const email = ref(null);
 const message = ref(null);
@@ -33,6 +35,7 @@ const handleSubmit = async () => {
       // Handle the request errors
     },
     onResponse({ request, response, options }) {
+      confetti();
       modalMessage.value = 'Ваш запрос успешно обработан.';
       // Process the response data
       name.value = null;
