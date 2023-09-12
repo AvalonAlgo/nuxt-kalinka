@@ -26,7 +26,7 @@ const colorsForElements = computed(() => props.elements.map(() => randomCheerful
 const eltitle = ref(null)
 const isVisibletitle = useElementVisibility(eltitle)
 
-const text = "Мы будем рады Вам, если...";
+const text = "Мы будем рады помочь Вам, если...";
 const animatedText = ref('');
 let index = 0;
 
@@ -70,7 +70,7 @@ watchEffect(() => {
       <div class="container px-5 py-12 mx-auto">
         <div class="flex flex-wrap w-full mb-10 flex-col items-center text-center">
           <!-- <VueTypewriterEffect class="typing sm:text-3xl text-2xl font-medium title-font mb-2 text-blue-500 italic" :strings="['Мы с радостью Вам поможем, если...']" /> -->
-          <h1 ref="eltitle" :class="{'typewriter': isVisibletitle}" class="sm:text-3xl text-2xl font-medium title-font mb-2 text-blue-500 italic">Мы будем рады Вам, если...</h1>
+          <h1 ref="eltitle" :class="{'typewriter': isVisibletitle}" class="sm:text-3xl text-2xl font-medium title-font mb-2 text-blue-500 italic">Мы будем рады помочь Вам, если...</h1>
         </div>
 
         <div class="flex flex-wrap -m-4">
