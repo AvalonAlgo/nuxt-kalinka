@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@firebase/app-types": "^0.9.0",
+    "@nuxt/ui": "^2.8.1",
     "@sendgrid/mail": "^7.7.0",
     "@supabase/supabase-js": "^2.33.1",
     "@tresjs/cientos": "^3.2.1",

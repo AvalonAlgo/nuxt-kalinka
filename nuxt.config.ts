@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
-    '@nuxthq/ui',
+    '@nuxt/ui',
     '@vueuse/nuxt',
     '@nuxt/image',
     'vue-email/nuxt',
