@@ -20,7 +20,6 @@
     "nodemailer": "^6.9.5",
     "nuxt": "^3.7.1",
     "nuxt-icon": "^0.5.0",
-    "supabase": "^1.93.0",
     "vue-email": "^0.6.7"
   },
   "dependencies": {
