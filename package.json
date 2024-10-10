@@ -9,29 +9,30 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@element-plus/nuxt": "^1.0.5",
+    "@element-plus/nuxt": "^1.0.10",
     "@nuxt/devtools": "latest",
     "@nuxt/image": "1.0.0-rc.1",
     "@nuxthq/ui": "^2.7.0",
-    "@nuxtjs/google-fonts": "^3.0.2",
-    "@types/node": "^18.17.14",
-    "@vueuse/nuxt": "^10.4.1",
-    "element-plus": "^2.3.12",
-    "nodemailer": "^6.9.5",
-    "nuxt": "^3.7.1",
+    "@nuxtjs/google-fonts": "^3.2.0",
+    "@types/node": "^18.19.55",
+    "@vueuse/nuxt": "^10.11.1",
+    "element-plus": "^2.8.4",
+    "nodemailer": "^6.9.15",
+    "nuxt": "^3.13.2",
     "nuxt-icon": "^0.5.0",
-    "vue-email": "^0.6.7"
+    "vue-email": "^0.8.11"
   },
   "dependencies": {
-    "@nuxt/ui": "^2.8.1",
-    "@sendgrid/mail": "^7.7.0",
-    "@tweakpane/plugin-essentials": "^0.2.0",
-    "canvas-confetti": "^1.6.0",
-    "esbuild": "^0.19.2",
-    "mailersend": "^2.2.0",
+    "@iconify/utils": "^2.1.33",
+    "@nuxt/ui": "^2.18.7",
+    "@sendgrid/mail": "^8.1.3",
+    "@tweakpane/plugin-essentials": "^0.2.1",
+    "canvas-confetti": "^1.9.3",
+    "esbuild": "^0.19.12",
+    "mailersend": "^2.3.0",
     "nitropack-edge": "2.6.0-28212707.e5f095d",
     "sharp": "^0.32.6",
     "vue-typewriter-effect": "^1.0.1",
-    "vue3-carousel-nuxt": "^1.1.0"
+    "vue3-carousel-nuxt": "^1.1.3"
   }
 }
